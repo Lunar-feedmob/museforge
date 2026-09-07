@@ -1,8 +1,8 @@
 """LLM providers.
 
 MuseForge is LLM-agnostic: the service layer depends on the ``LLMProvider`` protocol, never on
-a specific vendor SDK. An Anthropic implementation is provided for convenience (this project
-is developed in Claude Code), but the core never imports ``anthropic`` directly.
+a specific vendor SDK. Concrete implementations are provided for several vendors; the core
+never imports any vendor SDK directly.
 
 If no provider is configured, the Assistant falls back to deterministic heuristics.
 """

@@ -15,7 +15,7 @@ from museforge.knowledge.store import KnowledgeStore
 from museforge.services.assistant import MuseForgeAssistant
 
 DEMOS = [
-    ("demo-1-xiaohongshu-recruitment", "帮我做一张 AI 公司招聘小红书封面，3:4，极简，专业，有一点 Claude 的编辑感。", "universal"),
+    ("demo-1-xiaohongshu-recruitment", "帮我做一张 AI 公司招聘小红书封面，3:4，极简，专业，有一点编辑感。", "universal"),
     ("demo-2-fintech-card-ad", "Create a premium fintech card advertisement.", "nano-banana-pro"),
     ("demo-3-saas-hero", "Create a clean SaaS / AI product hero visual.", "gpt-image-2"),
     ("demo-4-cinematic-portrait", "Create a realistic cinematic character portrait.", "gpt-image-2"),

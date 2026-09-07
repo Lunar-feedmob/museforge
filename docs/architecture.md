@@ -106,8 +106,8 @@ class EmbeddingProvider(Protocol):
     def embed(self, texts: list[str]) -> list[list[float]]: ...
 ```
 
-- `AnthropicProvider` is provided for convenience (this project is developed in Claude Code),
-  but the core never imports `anthropic` directly.
+- Concrete vendor implementations (e.g. `AnthropicProvider`) are provided for convenience,
+  but the core never imports any vendor SDK directly.
 - `LocalEmbeddingProvider` (hash-based / TF-IDF fallback) is the V0 default so the system
   works with no API key.
 - If no LLM is configured, the Assistant falls back to **deterministic heuristics** (rule-based

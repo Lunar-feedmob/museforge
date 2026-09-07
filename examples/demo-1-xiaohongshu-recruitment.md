@@ -1,6 +1,6 @@
 # Demo: demo-1-xiaohongshu-recruitment
 
-**User request:** 帮我做一张 AI 公司招聘小红书封面，3:4，极简，专业，有一点 Claude 的编辑感。
+**User request:** 帮我做一张 AI 公司招聘小红书封面，3:4，极简，专业，有一点编辑感。
 
 ---
 
