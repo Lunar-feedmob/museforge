@@ -1,0 +1,76 @@
+{
+  "id": "pattern-cinematic-character-portrait",
+  "name": "Cinematic Character Portrait",
+  "aliases": [
+    "portrait",
+    "cinematic portrait"
+  ],
+  "category": "photography",
+  "description": "Subject + 85mm + shallow DOF + editorial mood.",
+  "visual_goal": "A premium, editorial portrait.",
+  "best_for": [
+    "portraits",
+    "fashion",
+    "character shots"
+  ],
+  "not_good_for": [
+    "product ads"
+  ],
+  "composition": "subject-forward, rule of thirds",
+  "visual_hierarchy": "face first, environment second",
+  "subject_placement": "off-center or centered, eye-level",
+  "foreground": "soft bokeh",
+  "midground": "the subject",
+  "background": "minimal or environmental",
+  "perspective": "eye-level, 85mm",
+  "lighting_strategy": "soft key + rim, high contrast",
+  "color_strategy": "warm desaturated or teal-orange",
+  "typography_strategy": "n/a",
+  "negative_space_strategy": "controlled background",
+  "supporting_elements": [
+    "film grain",
+    "light leak"
+  ],
+  "prompt_structure": [
+    "Subject",
+    "Environment",
+    "Composition",
+    "Camera",
+    "Lens",
+    "Lighting",
+    "Color",
+    "Mood",
+    "Constraints"
+  ],
+  "constraints": [
+    "natural skin texture",
+    "no over-smoothing"
+  ],
+  "common_failures": [
+    "plastic skin",
+    "flat lighting"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "related_techniques": [
+    "technique-camera-lens",
+    "technique-lighting-control",
+    "technique-color-grading"
+  ],
+  "related_recipes": [
+    "recipe-character-consistency"
+  ],
+  "example_cases": [
+    "case-cinematic-portrait"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "portrait",
+    "cinematic",
+    "photography"
+  ]
+}

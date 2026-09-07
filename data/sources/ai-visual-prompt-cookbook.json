@@ -1,0 +1,13 @@
+{
+  "id": "ai-visual-prompt-cookbook",
+  "name": "VigoZhao/AI-Visual-Prompt-Cookbook",
+  "url": "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook",
+  "kind": "github",
+  "license": "MIT",
+  "allowed_usage": null,
+  "redistribution_status": "allowed",
+  "attribution_requirements": "MIT notice.",
+  "description": "118+ JSON style packs: copy one JSON, get a style.",
+  "last_checked": null,
+  "notes": ""
+}

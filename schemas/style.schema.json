@@ -1,0 +1,117 @@
+{
+  "description": "A reusable visual system (aesthetic). Strictly separate from category.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "aliases": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Aliases",
+      "type": "array"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "visual_characteristics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Visual Characteristics",
+      "type": "array"
+    },
+    "composition_behavior": {
+      "default": "",
+      "title": "Composition Behavior",
+      "type": "string"
+    },
+    "color_behavior": {
+      "default": "",
+      "title": "Color Behavior",
+      "type": "string"
+    },
+    "lighting_behavior": {
+      "default": "",
+      "title": "Lighting Behavior",
+      "type": "string"
+    },
+    "typography_behavior": {
+      "default": "",
+      "title": "Typography Behavior",
+      "type": "string"
+    },
+    "material_behavior": {
+      "default": "",
+      "title": "Material Behavior",
+      "type": "string"
+    },
+    "texture_behavior": {
+      "default": "",
+      "title": "Texture Behavior",
+      "type": "string"
+    },
+    "best_for": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Best For",
+      "type": "array"
+    },
+    "avoid": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Avoid",
+      "type": "array"
+    },
+    "related_patterns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Patterns",
+      "type": "array"
+    },
+    "related_techniques": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Techniques",
+      "type": "array"
+    },
+    "example_cases": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Example Cases",
+      "type": "array"
+    },
+    "source_repositories": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Repositories",
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "title": "Style",
+  "type": "object"
+}

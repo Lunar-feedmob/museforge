@@ -1,0 +1,44 @@
+{
+  "id": "style-retro-print",
+  "name": "retro print",
+  "aliases": [
+    "retro",
+    "vintage",
+    "复古"
+  ],
+  "description": "Halftone, grain, vintage palette, print texture.",
+  "visual_characteristics": [
+    "halftone",
+    "grain",
+    "vintage palette"
+  ],
+  "composition_behavior": "poster-like, bold",
+  "color_behavior": "muted vintage tones",
+  "lighting_behavior": "flat print lighting",
+  "typography_behavior": "bold display type",
+  "material_behavior": "paper, ink",
+  "texture_behavior": "halftone, grain",
+  "best_for": [
+    "posters",
+    "editorial",
+    "brand campaigns"
+  ],
+  "avoid": [
+    "photorealism"
+  ],
+  "related_patterns": [
+    "pattern-editorial-text-first-poster"
+  ],
+  "related_techniques": [
+    "technique-color-grading"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "tags": [
+    "retro",
+    "print",
+    "poster"
+  ]
+}

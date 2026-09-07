@@ -1,0 +1,50 @@
+{
+  "id": "style-editorial-minimalism",
+  "name": "editorial minimalism",
+  "aliases": [
+    "minimal",
+    "极简",
+    "editorial"
+  ],
+  "description": "Clean, text-first, generous whitespace, restrained palette.",
+  "visual_characteristics": [
+    "generous whitespace",
+    "restrained palette",
+    "clear hierarchy"
+  ],
+  "composition_behavior": "text-first with a single focal point",
+  "color_behavior": "muted, 1-2 accent colors",
+  "lighting_behavior": "even, soft",
+  "typography_behavior": "strong sans-serif or serif headline, small supporting text",
+  "material_behavior": "flat or subtle texture",
+  "texture_behavior": "minimal grain",
+  "best_for": [
+    "recruitment posters",
+    "editorial covers",
+    "SaaS visuals"
+  ],
+  "avoid": [
+    "clutter",
+    "high density",
+    "many competing elements"
+  ],
+  "related_patterns": [
+    "pattern-editorial-text-first-poster",
+    "pattern-minimal-saas-illustration"
+  ],
+  "related_techniques": [
+    "technique-whitespace",
+    "technique-visual-hierarchy",
+    "technique-text-rendering"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "ai-visual-prompt-cookbook"
+  ],
+  "tags": [
+    "minimal",
+    "editorial",
+    "clean"
+  ]
+}

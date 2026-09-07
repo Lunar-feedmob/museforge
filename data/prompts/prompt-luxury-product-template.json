@@ -1,0 +1,25 @@
+{
+  "id": "prompt-luxury-product-template",
+  "title": "Luxury product on dark water (template)",
+  "original_prompt": "Product: [BRAND] [PRODUCT NAME] - [bottle shape], [label description], [liquid color]. Scene: Luxury product shot floating on dark water with [flower type] in [colors] arranged around it. [Lighting style] creates reflections and ripples across the water. Mood & Style: ethereal and luxurious, high-end commercial photography, [camera angle], shallow depth of field with soft bokeh background.",
+  "source_repo": "awesome-nanobanana-pro",
+  "source_url": "https://github.com/ZeroLu/awesome-nanobanana-pro",
+  "author": "AmirMušić",
+  "license": "CC BY 4.0",
+  "target_model": "nano-banana-pro",
+  "category": "product advertisement",
+  "tags": [
+    "luxury",
+    "template",
+    "product"
+  ],
+  "why_it_is_good": "A parameterized luxury product template with named variables.",
+  "techniques_used": [
+    "templated variables",
+    "lighting control"
+  ],
+  "visual_pattern": "Centered Luxury Product Shot",
+  "style": "luxury commercial",
+  "prompt_dna": "Luxury Product Shot DNA",
+  "tier": "annotated"
+}

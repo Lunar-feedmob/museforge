@@ -1,0 +1,73 @@
+{
+  "id": "pattern-centered-luxury-product",
+  "name": "Centered Luxury Product Shot",
+  "aliases": [
+    "luxury product",
+    "floating product"
+  ],
+  "category": "product advertisement",
+  "description": "Centered product on dark water/reflection with flowers and golden hour.",
+  "visual_goal": "Premium, ethereal product presentation.",
+  "best_for": [
+    "luxury product ads",
+    "perfume",
+    "beverages"
+  ],
+  "not_good_for": [
+    "budget products",
+    "text-heavy"
+  ],
+  "composition": "centered product + reflection + surrounding elements",
+  "visual_hierarchy": "product first, reflection second",
+  "subject_placement": "centered, floating",
+  "foreground": "reflection/ripples",
+  "midground": "the product",
+  "background": "dark water or gradient",
+  "perspective": "eye-level, slight low angle",
+  "lighting_strategy": "golden hour glow, reflections",
+  "color_strategy": "deep tones + gold accents",
+  "typography_strategy": "minimal",
+  "negative_space_strategy": "controlled around the product",
+  "supporting_elements": [
+    "flowers",
+    "ripples"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Lighting",
+    "Mood",
+    "Style",
+    "Constraints"
+  ],
+  "constraints": [
+    "preserve product geometry"
+  ],
+  "common_failures": [
+    "product distortion",
+    "over-cluttered water"
+  ],
+  "related_styles": [
+    "style-luxury-commercial"
+  ],
+  "related_techniques": [
+    "technique-lighting-control",
+    "technique-templated-variables",
+    "technique-product-preservation"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "example_cases": [
+    "case-fintech-card"
+  ],
+  "source_repositories": [
+    "awesome-nanobanana-pro"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "luxury",
+    "product",
+    "reflection"
+  ]
+}

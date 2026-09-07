@@ -1,0 +1,52 @@
+{
+  "id": "dna-editorial-text-first-poster",
+  "name": "Editorial Text-first Poster DNA",
+  "category": "poster",
+  "description": "The composable structure of a text-first editorial poster.",
+  "components": [
+    "format",
+    "headline",
+    "supporting text",
+    "illustration",
+    "style",
+    "color",
+    "typography",
+    "negative space"
+  ],
+  "pattern": "format + headline + supporting text + illustration + style + color + typography + negative space",
+  "variables": [
+    "headline",
+    "supporting text",
+    "style",
+    "palette"
+  ],
+  "best_for": [
+    "posters",
+    "covers",
+    "announcements"
+  ],
+  "related_patterns": [
+    "pattern-editorial-text-first-poster"
+  ],
+  "related_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy"
+  ],
+  "related_styles": [
+    "style-editorial-minimalism",
+    "style-modern-chinese-editorial"
+  ],
+  "source_families": [
+    "editorial poster"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "rednote-director-skill"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "poster",
+    "editorial",
+    "dna"
+  ]
+}

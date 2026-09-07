@@ -1,0 +1,103 @@
+{
+  "$defs": {
+    "SourceType": {
+      "description": "Provenance label for model knowledge. Never fabricate authority.",
+      "enum": [
+        "official",
+        "repository-derived",
+        "community-derived",
+        "inferred",
+        "experimental",
+        "unverified"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "description": "What a model can do, with a source_type label. Never an unverified claim.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "family": {
+      "default": "",
+      "title": "Family",
+      "type": "string"
+    },
+    "provider": {
+      "default": "",
+      "title": "Provider",
+      "type": "string"
+    },
+    "capabilities": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "strengths": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Strengths",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "text_rendering": {
+      "default": "",
+      "title": "Text Rendering",
+      "type": "string"
+    },
+    "consistency": {
+      "default": "",
+      "title": "Consistency",
+      "type": "string"
+    },
+    "editing": {
+      "default": "",
+      "title": "Editing",
+      "type": "string"
+    },
+    "prompt_style_notes": {
+      "default": "",
+      "title": "Prompt Style Notes",
+      "type": "string"
+    },
+    "source_type": {
+      "$ref": "#/$defs/SourceType",
+      "default": "unverified"
+    },
+    "source_references": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source References",
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "title": "ModelKnowledge",
+  "type": "object"
+}

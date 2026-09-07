@@ -1,0 +1,42 @@
+{
+  "id": "technique-lighting-control",
+  "name": "lighting control",
+  "category": "Lighting",
+  "description": "Specify lighting style and direction.",
+  "problem_it_solves": "Models default to flat, generic lighting.",
+  "pattern": "[lighting style] from [direction]",
+  "implementation_guidance": "Name the style (golden hour, soft diffused, rim) and direction.",
+  "when_to_use": [
+    "product ads",
+    "portraits",
+    "commercial"
+  ],
+  "when_not_to_use": [
+    "flat vector"
+  ],
+  "good_examples": [
+    "golden hour glow creates reflections and ripples across the water"
+  ],
+  "bad_examples": [
+    "good lighting"
+  ],
+  "related_patterns": [
+    "pattern-centered-luxury-product",
+    "pattern-breakout-product-hero"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-luxury-commercial",
+    "style-cinematic-realism"
+  ],
+  "source_repositories": [
+    "awesome-nanobanana-pro",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "lighting"
+  ]
+}

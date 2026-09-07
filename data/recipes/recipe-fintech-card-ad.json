@@ -1,0 +1,85 @@
+{
+  "id": "recipe-fintech-card-ad",
+  "name": "Fintech Card Ad",
+  "category": "product advertisement",
+  "goal": "A fintech card advertisement with exact numbers and clean hierarchy.",
+  "description": "The method for a fintech card ad.",
+  "required_inputs": [
+    "card name",
+    "key numbers",
+    "brand"
+  ],
+  "optional_inputs": [
+    "benefits",
+    "environment"
+  ],
+  "workflow": [
+    "product",
+    "numbers",
+    "hierarchy",
+    "ux",
+    "brand",
+    "text"
+  ],
+  "steps": [
+    "Identify the card product and its design.",
+    "Specify exact numbers and labels.",
+    "Establish a clean hierarchy.",
+    "Make the UI believable (wallet UX).",
+    "Protect the brand.",
+    "Add text-rendering constraints."
+  ],
+  "decision_points": [
+    "card design",
+    "key numbers"
+  ],
+  "recommended_patterns": [
+    "pattern-breakout-product-hero",
+    "pattern-centered-luxury-product"
+  ],
+  "recommended_styles": [
+    "style-luxury-commercial",
+    "style-3d-commercial"
+  ],
+  "recommended_techniques": [
+    "technique-text-rendering",
+    "technique-brand-preservation",
+    "technique-product-preservation"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Lighting",
+    "Style",
+    "Constraints"
+  ],
+  "composition_guidance": "Card hero, clean hierarchy, believable UX.",
+  "text_guidance": "Quote exact numbers and labels; crisp, clean type.",
+  "constraints": [
+    "exact numbers",
+    "clean hierarchy",
+    "protect brand"
+  ],
+  "common_failures": [
+    "number garble",
+    "unbelievable UX"
+  ],
+  "failure_recovery": [
+    "quote numbers exactly",
+    "simplify the UI"
+  ],
+  "example_cases": [
+    "case-fintech-card"
+  ],
+  "source_repositories": [
+    "gpt-image2-skill",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "fintech",
+    "card",
+    "ad"
+  ]
+}

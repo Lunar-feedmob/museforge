@@ -1,0 +1,42 @@
+{
+  "id": "technique-color-grading",
+  "name": "color grading",
+  "category": "Color Control",
+  "description": "Specify a color palette and grade.",
+  "problem_it_solves": "Models pick arbitrary colors.",
+  "pattern": "[palette] color grading",
+  "implementation_guidance": "Name the palette (warm desaturated, teal-orange) and accents.",
+  "when_to_use": [
+    "cinematic",
+    "editorial",
+    "branded"
+  ],
+  "when_not_to_use": [
+    "true-color product shots"
+  ],
+  "good_examples": [
+    "warm desaturated sepia and charcoal palette"
+  ],
+  "bad_examples": [
+    "nice colors"
+  ],
+  "related_patterns": [
+    "pattern-cinematic-character-portrait",
+    "pattern-double-exposure-portrait"
+  ],
+  "related_recipes": [
+    "recipe-editorial-poster"
+  ],
+  "related_styles": [
+    "style-cinematic-realism",
+    "style-retro-print"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "color",
+    "grade"
+  ]
+}

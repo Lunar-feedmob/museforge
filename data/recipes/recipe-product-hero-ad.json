@@ -1,0 +1,102 @@
+{
+  "id": "recipe-product-hero-ad",
+  "name": "Product Hero Ad",
+  "category": "product advertisement",
+  "goal": "A premium product hero image that preserves the product and sells it.",
+  "description": "The canonical method for a product hero advertisement.",
+  "required_inputs": [
+    "product name",
+    "product description",
+    "brand"
+  ],
+  "optional_inputs": [
+    "visual metaphor",
+    "environment",
+    "text"
+  ],
+  "workflow": [
+    "identify hero product",
+    "preserve geometry",
+    "choose metaphor",
+    "separate layers",
+    "light",
+    "support",
+    "negative space",
+    "brand",
+    "text",
+    "decorate"
+  ],
+  "steps": [
+    "Identify the hero product and its critical geometry.",
+    "Preserve critical product geometry and branding.",
+    "Select a primary visual metaphor (breakout, floating, reflection).",
+    "Create strong foreground/background separation.",
+    "Choose commercial lighting (rim, golden hour, soft studio).",
+    "Add controlled supporting elements (particles, flowers, ripples).",
+    "Reserve negative space for the product and any text.",
+    "Protect branding (exact name, logo, colors).",
+    "Add text-rendering constraints if text is present.",
+    "Remove irrelevant decorative elements."
+  ],
+  "decision_points": [
+    "metaphor choice",
+    "lighting style",
+    "text or no text"
+  ],
+  "recommended_patterns": [
+    "pattern-breakout-product-hero",
+    "pattern-centered-luxury-product",
+    "pattern-layered-depth-product-ad"
+  ],
+  "recommended_styles": [
+    "style-luxury-commercial",
+    "style-3d-commercial"
+  ],
+  "recommended_techniques": [
+    "technique-product-preservation",
+    "technique-brand-preservation",
+    "technique-lighting-control",
+    "technique-subject-hierarchy"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Lighting",
+    "Style",
+    "Supporting elements",
+    "Negative space",
+    "Constraints"
+  ],
+  "composition_guidance": "Hero product centered or three-quarter, strong depth.",
+  "text_guidance": "Quote exact text; keep it short; specify font style.",
+  "constraints": [
+    "preserve product geometry",
+    "protect branding"
+  ],
+  "common_failures": [
+    "product distortion",
+    "cluttered background",
+    "brand garble"
+  ],
+  "failure_recovery": [
+    "re-state product geometry",
+    "add negative constraints",
+    "quote brand name"
+  ],
+  "example_cases": [
+    "case-fintech-card",
+    "case-saas-hero"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "awesome-nanobanana-pro",
+    "gpt-image2-skill"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "product",
+    "ad",
+    "commercial"
+  ]
+}

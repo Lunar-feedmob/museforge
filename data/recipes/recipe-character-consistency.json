@@ -1,0 +1,81 @@
+{
+  "id": "recipe-character-consistency",
+  "name": "Character Consistency",
+  "category": "character",
+  "goal": "Keep the same character across images or panels.",
+  "description": "The method for consistent character generation.",
+  "required_inputs": [
+    "character description",
+    "reference image (optional)"
+  ],
+  "optional_inputs": [
+    "outfit",
+    "scene",
+    "panels"
+  ],
+  "workflow": [
+    "reference",
+    "identity",
+    "restyle",
+    "geometry",
+    "consistency"
+  ],
+  "steps": [
+    "Provide a reference image or a detailed character description.",
+    "Preserve the character's identity (face, hair, build).",
+    "Apply the new styling or scene.",
+    "Keep the character's geometry consistent.",
+    "Re-anchor with a consolidated prompt if drift occurs."
+  ],
+  "decision_points": [
+    "reference vs description",
+    "restyle vs new scene"
+  ],
+  "recommended_patterns": [
+    "pattern-cinematic-character-portrait",
+    "pattern-double-exposure-portrait"
+  ],
+  "recommended_styles": [
+    "style-cinematic-realism"
+  ],
+  "recommended_techniques": [
+    "technique-reference-image",
+    "technique-character-consistency",
+    "technique-camera-lens"
+  ],
+  "prompt_structure": [
+    "Subject",
+    "Reference",
+    "Style",
+    "Composition",
+    "Lighting",
+    "Constraints"
+  ],
+  "composition_guidance": "Subject-forward, consistent framing.",
+  "text_guidance": "n/a",
+  "constraints": [
+    "preserve identity",
+    "natural skin texture"
+  ],
+  "common_failures": [
+    "identity drift",
+    "plastic skin"
+  ],
+  "failure_recovery": [
+    "re-state identity",
+    "re-anchor with reference"
+  ],
+  "example_cases": [
+    "case-cinematic-portrait"
+  ],
+  "source_repositories": [
+    "awesome-nano-banana-images",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "character",
+    "consistency",
+    "portrait"
+  ]
+}

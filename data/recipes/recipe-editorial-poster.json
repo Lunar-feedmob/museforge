@@ -1,0 +1,97 @@
+{
+  "id": "recipe-editorial-poster",
+  "name": "Editorial Poster",
+  "category": "poster",
+  "goal": "A text-first editorial poster with clear hierarchy.",
+  "description": "The canonical method for an editorial poster.",
+  "required_inputs": [
+    "headline",
+    "supporting text"
+  ],
+  "optional_inputs": [
+    "illustration",
+    "brand",
+    "date"
+  ],
+  "workflow": [
+    "format",
+    "goal",
+    "layout",
+    "headline",
+    "text",
+    "illustration",
+    "style",
+    "color",
+    "type",
+    "details",
+    "constraints"
+  ],
+  "steps": [
+    "Set canvas/format and aspect ratio.",
+    "Define the visual goal and message.",
+    "Choose the layout (text-first, grid, centered).",
+    "Place the headline as the dominant element.",
+    "Add supporting text with clear hierarchy.",
+    "Add a supporting illustration or icon.",
+    "Select the style (editorial minimalism, retro, Swiss).",
+    "Choose a restrained color palette.",
+    "Specify typography (headline + supporting).",
+    "Add details and constraints (text readability, low density)."
+  ],
+  "decision_points": [
+    "text-first vs image-first",
+    "style",
+    "palette"
+  ],
+  "recommended_patterns": [
+    "pattern-editorial-text-first-poster"
+  ],
+  "recommended_styles": [
+    "style-editorial-minimalism",
+    "style-modern-chinese-editorial",
+    "style-retro-print",
+    "style-swiss-editorial"
+  ],
+  "recommended_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy",
+    "technique-whitespace"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Visual goal",
+    "Layout",
+    "Hierarchy",
+    "Style",
+    "Color",
+    "Typography",
+    "Constraints"
+  ],
+  "composition_guidance": "Headline first, then supporting text, then illustration.",
+  "text_guidance": "Quote every string; specify font style; keep text short.",
+  "constraints": [
+    "text readability first",
+    "low density"
+  ],
+  "common_failures": [
+    "text garble",
+    "cluttered layout"
+  ],
+  "failure_recovery": [
+    "quote text exactly",
+    "reduce element count"
+  ],
+  "example_cases": [
+    "case-xiaohongshu-recruit"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "rednote-director-skill"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "poster",
+    "editorial",
+    "text"
+  ]
+}

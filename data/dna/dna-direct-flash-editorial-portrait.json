@@ -1,0 +1,47 @@
+{
+  "id": "dna-direct-flash-editorial-portrait",
+  "name": "Direct Flash Editorial Portrait DNA",
+  "category": "photography",
+  "description": "The composable structure of a direct-flash editorial portrait.",
+  "components": [
+    "subject",
+    "direct flash",
+    "dark ambient environment",
+    "35mm framing",
+    "natural skin texture",
+    "slightly candid composition",
+    "editorial mood"
+  ],
+  "pattern": "subject + direct flash + dark ambient + 35mm + natural skin + candid + editorial mood",
+  "variables": [
+    "subject",
+    "environment",
+    "mood"
+  ],
+  "best_for": [
+    "editorial portraits",
+    "fashion"
+  ],
+  "related_patterns": [
+    "pattern-cinematic-character-portrait"
+  ],
+  "related_techniques": [
+    "technique-camera-lens",
+    "technique-lighting-control"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "source_families": [
+    "editorial portrait"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "portrait",
+    "flash",
+    "dna"
+  ]
+}

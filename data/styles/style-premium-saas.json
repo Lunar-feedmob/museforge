@@ -1,0 +1,48 @@
+{
+  "id": "style-premium-saas",
+  "name": "premium SaaS",
+  "aliases": [
+    "saas",
+    "software",
+    "科技感"
+  ],
+  "description": "Flat vector + device + brand color, minimal and modern.",
+  "visual_characteristics": [
+    "flat vector",
+    "device composition",
+    "brand color"
+  ],
+  "composition_behavior": "device hero with minimal illustration",
+  "color_behavior": "brand color + neutral background",
+  "lighting_behavior": "soft, even",
+  "typography_behavior": "clean sans-serif",
+  "material_behavior": "flat, geometric",
+  "texture_behavior": "none",
+  "best_for": [
+    "SaaS landing heroes",
+    "app screenshots",
+    "product marketing"
+  ],
+  "avoid": [
+    "photorealism",
+    "clutter"
+  ],
+  "related_patterns": [
+    "pattern-minimal-saas-illustration",
+    "pattern-hero-device-composition"
+  ],
+  "related_techniques": [
+    "technique-whitespace",
+    "technique-visual-hierarchy"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "gpt-image2-skill",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "tags": [
+    "saas",
+    "flat",
+    "tech"
+  ]
+}

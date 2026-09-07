@@ -1,0 +1,43 @@
+{
+  "id": "technique-visual-hierarchy",
+  "name": "visual hierarchy",
+  "category": "Visual Hierarchy",
+  "description": "Establish a clear order of visual importance.",
+  "problem_it_solves": "Models give equal weight to everything.",
+  "pattern": "headline first, then supporting text, then illustration",
+  "implementation_guidance": "Rank elements and state their relative size/emphasis.",
+  "when_to_use": [
+    "posters",
+    "infographics",
+    "ads"
+  ],
+  "when_not_to_use": [
+    "single-subject photography"
+  ],
+  "good_examples": [
+    "headline first, then supporting text, then illustration"
+  ],
+  "bad_examples": [
+    "some text and a picture"
+  ],
+  "related_patterns": [
+    "pattern-editorial-text-first-poster",
+    "pattern-magazine-infographic"
+  ],
+  "related_recipes": [
+    "recipe-editorial-poster",
+    "recipe-infographic"
+  ],
+  "related_styles": [
+    "style-editorial-minimalism",
+    "style-modern-chinese-editorial"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "hierarchy",
+    "layout"
+  ]
+}

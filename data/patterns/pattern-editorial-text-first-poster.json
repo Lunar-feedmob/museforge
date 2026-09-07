@@ -1,0 +1,78 @@
+{
+  "id": "pattern-editorial-text-first-poster",
+  "name": "Editorial Text-first Poster",
+  "aliases": [
+    "text-first poster",
+    "editorial poster"
+  ],
+  "category": "poster",
+  "description": "Headline-first layout with supporting text and illustration.",
+  "visual_goal": "Communicate a message clearly and elegantly.",
+  "best_for": [
+    "recruitment posters",
+    "editorial covers",
+    "announcements"
+  ],
+  "not_good_for": [
+    "pure product shots"
+  ],
+  "composition": "text-first with a single focal point",
+  "visual_hierarchy": "headline -> supporting text -> illustration",
+  "subject_placement": "headline dominant, illustration supporting",
+  "foreground": "headline",
+  "midground": "supporting text",
+  "background": "clean or subtle texture",
+  "perspective": "flat, editorial",
+  "lighting_strategy": "even, soft",
+  "color_strategy": "muted palette + 1-2 accents",
+  "typography_strategy": "strong headline, refined supporting type",
+  "negative_space_strategy": "generous margins",
+  "supporting_elements": [
+    "small illustration or icon"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Visual goal",
+    "Layout",
+    "Hierarchy",
+    "Style",
+    "Color",
+    "Typography",
+    "Constraints"
+  ],
+  "constraints": [
+    "text readability first",
+    "low density"
+  ],
+  "common_failures": [
+    "text garble",
+    "cluttered layout"
+  ],
+  "related_styles": [
+    "style-editorial-minimalism",
+    "style-modern-chinese-editorial",
+    "style-retro-print"
+  ],
+  "related_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy",
+    "technique-whitespace"
+  ],
+  "related_recipes": [
+    "recipe-editorial-poster",
+    "recipe-xiaohongshu-info-card"
+  ],
+  "example_cases": [
+    "case-xiaohongshu-recruit"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "rednote-director-skill"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "poster",
+    "editorial",
+    "text"
+  ]
+}

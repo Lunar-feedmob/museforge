@@ -1,0 +1,42 @@
+{
+  "id": "technique-character-consistency",
+  "name": "character consistency",
+  "category": "Character Consistency",
+  "description": "Keep the same character across panels or images.",
+  "problem_it_solves": "Models change a character's appearance between images.",
+  "pattern": "these two characters ... same character across panels",
+  "implementation_guidance": "Name the character, describe fixed features, reference prior images.",
+  "when_to_use": [
+    "comics",
+    "storyboards",
+    "multi-image campaigns"
+  ],
+  "when_not_to_use": [
+    "single image"
+  ],
+  "good_examples": [
+    "these two characters in a classic black and white film noir"
+  ],
+  "bad_examples": [
+    "a guy in every panel"
+  ],
+  "related_patterns": [
+    "pattern-multi-panel-comic"
+  ],
+  "related_recipes": [
+    "recipe-multi-panel-comic",
+    "recipe-character-consistency"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "source_repositories": [
+    "awesome-nano-banana-images",
+    "awesome-nano-banana-pro-prompts"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "consistency",
+    "character"
+  ]
+}

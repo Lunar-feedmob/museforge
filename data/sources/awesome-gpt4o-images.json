@@ -1,0 +1,13 @@
+{
+  "id": "awesome-gpt4o-images",
+  "name": "jamez-bondos/awesome-gpt4o-images",
+  "url": "https://github.com/jamez-bondos/awesome-gpt4o-images",
+  "kind": "github",
+  "license": "CC BY 4.0",
+  "allowed_usage": null,
+  "redistribution_status": "allowed",
+  "attribution_requirements": "Attribute author + source.",
+  "description": "Curated GPT-4o + gpt-image-1 cases, bilingual, per-case attribution.",
+  "last_checked": null,
+  "notes": ""
+}

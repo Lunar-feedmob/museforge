@@ -1,0 +1,201 @@
+{
+  "description": "A complete, analyzed example. More than a prompt: full visual analysis + links.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "category": {
+      "default": "",
+      "title": "Category",
+      "type": "string"
+    },
+    "use_case": {
+      "default": "",
+      "title": "Use Case",
+      "type": "string"
+    },
+    "user_intent": {
+      "default": "",
+      "title": "User Intent",
+      "type": "string"
+    },
+    "input_type": {
+      "default": "text-to-image",
+      "title": "Input Type",
+      "type": "string"
+    },
+    "reference_requirements": {
+      "default": "",
+      "title": "Reference Requirements",
+      "type": "string"
+    },
+    "source": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "original_prompt": {
+      "default": "",
+      "title": "Original Prompt",
+      "type": "string"
+    },
+    "visual_intent": {
+      "default": "",
+      "title": "Visual Intent",
+      "type": "string"
+    },
+    "subject": {
+      "default": "",
+      "title": "Subject",
+      "type": "string"
+    },
+    "environment": {
+      "default": "",
+      "title": "Environment",
+      "type": "string"
+    },
+    "composition": {
+      "default": "",
+      "title": "Composition",
+      "type": "string"
+    },
+    "lighting": {
+      "default": "",
+      "title": "Lighting",
+      "type": "string"
+    },
+    "camera": {
+      "default": "",
+      "title": "Camera",
+      "type": "string"
+    },
+    "lens": {
+      "default": "",
+      "title": "Lens",
+      "type": "string"
+    },
+    "perspective": {
+      "default": "",
+      "title": "Perspective",
+      "type": "string"
+    },
+    "style": {
+      "default": "",
+      "title": "Style",
+      "type": "string"
+    },
+    "color": {
+      "default": "",
+      "title": "Color",
+      "type": "string"
+    },
+    "materials": {
+      "default": "",
+      "title": "Materials",
+      "type": "string"
+    },
+    "typography": {
+      "default": "",
+      "title": "Typography",
+      "type": "string"
+    },
+    "layout": {
+      "default": "",
+      "title": "Layout",
+      "type": "string"
+    },
+    "supporting_elements": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Elements",
+      "type": "array"
+    },
+    "techniques": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Techniques",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "negative_constraints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Negative Constraints",
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
+    "pattern_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Pattern Ids",
+      "type": "array"
+    },
+    "style_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Style Ids",
+      "type": "array"
+    },
+    "technique_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Technique Ids",
+      "type": "array"
+    },
+    "recipe_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Recipe Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "title"
+  ],
+  "title": "Case",
+  "type": "object"
+}

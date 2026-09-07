@@ -1,0 +1,104 @@
+{
+  "description": "A composable prompt structure unit — the smallest reusable building block.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "category": {
+      "default": "",
+      "title": "Category",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "components": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Components",
+      "type": "array"
+    },
+    "pattern": {
+      "default": "",
+      "title": "Pattern",
+      "type": "string"
+    },
+    "variables": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Variables",
+      "type": "array"
+    },
+    "best_for": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Best For",
+      "type": "array"
+    },
+    "related_patterns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Patterns",
+      "type": "array"
+    },
+    "related_techniques": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Techniques",
+      "type": "array"
+    },
+    "related_styles": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Styles",
+      "type": "array"
+    },
+    "source_families": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Families",
+      "type": "array"
+    },
+    "source_repositories": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Repositories",
+      "type": "array"
+    },
+    "confidence": {
+      "default": 0.5,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "title": "PromptDna",
+  "type": "object"
+}

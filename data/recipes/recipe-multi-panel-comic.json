@@ -1,0 +1,81 @@
+{
+  "id": "recipe-multi-panel-comic",
+  "name": "Multi-panel Comic",
+  "category": "comic",
+  "goal": "A multi-panel comic with consistent characters.",
+  "description": "The method for sequential art.",
+  "required_inputs": [
+    "story",
+    "characters"
+  ],
+  "optional_inputs": [
+    "panel count",
+    "style",
+    "text"
+  ],
+  "workflow": [
+    "story",
+    "grid",
+    "consistency",
+    "no-text",
+    "sequential"
+  ],
+  "steps": [
+    "Define the story and its beats.",
+    "Choose a panel grid (e.g. 2x3).",
+    "Keep characters consistent across panels.",
+    "Decide whether to include text (often none).",
+    "Order panels for sequential reading."
+  ],
+  "decision_points": [
+    "panel count",
+    "text or no text"
+  ],
+  "recommended_patterns": [
+    "pattern-multi-panel-comic"
+  ],
+  "recommended_styles": [
+    "style-cinematic-realism",
+    "style-flat-vector"
+  ],
+  "recommended_techniques": [
+    "technique-character-consistency",
+    "technique-multi-panel-grid",
+    "technique-negative-constraints"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Story",
+    "Layout",
+    "Style",
+    "Color",
+    "Constraints"
+  ],
+  "composition_guidance": "Strict grid, sequential flow.",
+  "text_guidance": "Omit text unless explicitly requested.",
+  "constraints": [
+    "character consistency",
+    "no text unless specified"
+  ],
+  "common_failures": [
+    "character drift",
+    "panel misalignment"
+  ],
+  "failure_recovery": [
+    "re-state characters",
+    "re-state grid"
+  ],
+  "example_cases": [
+    "case-multi-panel-comic"
+  ],
+  "source_repositories": [
+    "awesome-nano-banana-images",
+    "awesome-nano-banana-pro-prompts"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "comic",
+    "storyboard",
+    "sequential"
+  ]
+}

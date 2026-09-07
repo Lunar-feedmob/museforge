@@ -1,0 +1,45 @@
+{
+  "id": "style-flat-vector",
+  "name": "flat vector",
+  "aliases": [
+    "flat",
+    "矢量",
+    "扁平"
+  ],
+  "description": "Minimal, geometric, brand-friendly flat illustration.",
+  "visual_characteristics": [
+    "flat shapes",
+    "geometric",
+    "no gradients"
+  ],
+  "composition_behavior": "simple, balanced",
+  "color_behavior": "2-4 flat colors",
+  "lighting_behavior": "none (flat)",
+  "typography_behavior": "clean sans-serif",
+  "material_behavior": "flat",
+  "texture_behavior": "none",
+  "best_for": [
+    "SaaS illustrations",
+    "icons",
+    "explainers"
+  ],
+  "avoid": [
+    "photorealism",
+    "complex gradients"
+  ],
+  "related_patterns": [
+    "pattern-minimal-saas-illustration"
+  ],
+  "related_techniques": [
+    "technique-whitespace"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "gpt-image2-skill"
+  ],
+  "tags": [
+    "flat",
+    "vector",
+    "minimal"
+  ]
+}

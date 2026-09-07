@@ -1,0 +1,77 @@
+{
+  "id": "pattern-breakout-product-hero",
+  "name": "Breakout Product Hero",
+  "aliases": [
+    "product hero",
+    "breakout"
+  ],
+  "category": "product advertisement",
+  "description": "Hero product with forced perspective, foreground overlap, and particles.",
+  "visual_goal": "Make the product feel dynamic and premium.",
+  "best_for": [
+    "product ads",
+    "hero visuals",
+    "launch campaigns"
+  ],
+  "not_good_for": [
+    "text-heavy posters",
+    "documentary"
+  ],
+  "composition": "hero object + forced perspective + foreground overlap",
+  "visual_hierarchy": "product first, supporting elements second",
+  "subject_placement": "centered or three-quarter, breaking the frame",
+  "foreground": "overlapping particles or fragments",
+  "midground": "the hero product",
+  "background": "clean gradient or controlled environment",
+  "perspective": "forced perspective, slight low angle",
+  "lighting_strategy": "commercial lighting with rim highlights",
+  "color_strategy": "product color + neutral background + accent",
+  "typography_strategy": "minimal, reserved for brand",
+  "negative_space_strategy": "controlled negative space around the product",
+  "supporting_elements": [
+    "particles",
+    "secondary supporting elements"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Lighting",
+    "Style",
+    "Constraints"
+  ],
+  "constraints": [
+    "preserve product geometry",
+    "protect branding"
+  ],
+  "common_failures": [
+    "product distortion",
+    "cluttered background"
+  ],
+  "related_styles": [
+    "style-luxury-commercial",
+    "style-3d-commercial"
+  ],
+  "related_techniques": [
+    "technique-product-preservation",
+    "technique-subject-hierarchy",
+    "technique-lighting-control"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "example_cases": [
+    "case-fintech-card",
+    "case-saas-hero"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "awesome-nanobanana-pro"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "product",
+    "hero",
+    "commercial"
+  ]
+}

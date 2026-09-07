@@ -1,0 +1,13 @@
+{
+  "id": "nano-banana-json-schema",
+  "name": "alexewerlof/nano-banana-json-schema",
+  "url": "https://gist.github.com/alexewerlof/1d13401a7647339469141dc2960e66a9",
+  "kind": "github",
+  "license": "unclear",
+  "allowed_usage": null,
+  "redistribution_status": "restricted",
+  "attribution_requirements": "Do not copy prompt text.",
+  "description": "Typed JSON schema for Nano Banana prompts (meta/subject/scene).",
+  "last_checked": null,
+  "notes": ""
+}

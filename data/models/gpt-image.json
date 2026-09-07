@@ -1,0 +1,31 @@
+{
+  "id": "gpt-image",
+  "name": "GPT Image",
+  "family": "gpt-image",
+  "provider": "OpenAI",
+  "capabilities": [
+    "text-to-image",
+    "image editing",
+    "text rendering"
+  ],
+  "strengths": [
+    "strong text rendering",
+    "instruction following"
+  ],
+  "limitations": [
+    "consistency across long sessions can drift"
+  ],
+  "text_rendering": "strong; put exact text in quotes and specify font style",
+  "consistency": "good within a session; re-anchor with a consolidated prompt if it drifts",
+  "editing": "conversational editing supported",
+  "prompt_style_notes": "Structured, specific prompts work well; avoid vague adjectives.",
+  "source_type": "community-derived",
+  "source_references": [
+    "awesome-gpt4o-images",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "tags": [
+    "openai",
+    "text-rendering"
+  ]
+}

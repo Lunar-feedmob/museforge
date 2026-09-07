@@ -1,0 +1,87 @@
+{
+  "id": "recipe-xiaohongshu-info-card",
+  "name": "Xiaohongshu Information Card",
+  "category": "social media poster",
+  "goal": "A platform-aware Xiaohongshu cover that prioritizes text readability.",
+  "description": "The method for a Xiaohongshu (RedNote) information card.",
+  "required_inputs": [
+    "topic",
+    "headline"
+  ],
+  "optional_inputs": [
+    "sub-points",
+    "brand",
+    "illustration"
+  ],
+  "workflow": [
+    "platform",
+    "ratio",
+    "readability",
+    "minimalism",
+    "density",
+    "cover",
+    "pages"
+  ],
+  "steps": [
+    "Confirm the platform (Xiaohongshu) and aspect ratio (3:4).",
+    "Prioritize text readability above all else.",
+    "Choose editorial minimalism with a restrained palette.",
+    "Keep visual density low.",
+    "Design the cover as the primary card.",
+    "Plan inner pages/carousel if needed."
+  ],
+  "decision_points": [
+    "cover vs carousel",
+    "palette"
+  ],
+  "recommended_patterns": [
+    "pattern-editorial-text-first-poster"
+  ],
+  "recommended_styles": [
+    "style-editorial-minimalism",
+    "style-modern-chinese-editorial"
+  ],
+  "recommended_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy",
+    "technique-whitespace"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Visual goal",
+    "Layout",
+    "Hierarchy",
+    "Style",
+    "Color",
+    "Typography",
+    "Constraints"
+  ],
+  "composition_guidance": "Text-first, generous margins, single focal point.",
+  "text_guidance": "Quote exact Chinese text; specify font style.",
+  "constraints": [
+    "text readability first",
+    "low density",
+    "3:4"
+  ],
+  "common_failures": [
+    "text garble",
+    "too dense"
+  ],
+  "failure_recovery": [
+    "quote text exactly",
+    "increase whitespace"
+  ],
+  "example_cases": [
+    "case-xiaohongshu-recruit"
+  ],
+  "source_repositories": [
+    "rednote-director-skill",
+    "ai-image-prompt-cookbook"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "xiaohongshu",
+    "social",
+    "cover"
+  ]
+}

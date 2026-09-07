@@ -1,0 +1,13 @@
+{
+  "id": "ai-image-prompt-cookbook",
+  "name": "gpt-img-2/ai-image-prompt-cookbook",
+  "url": "https://github.com/gpt-img-2/ai-image-prompt-cookbook",
+  "kind": "github",
+  "license": "unclear",
+  "allowed_usage": null,
+  "redistribution_status": "restricted",
+  "attribution_requirements": "Do not copy prompt text.",
+  "description": "Chinese e-commerce / Xiaohongshu / ad-poster cookbook.",
+  "last_checked": null,
+  "notes": ""
+}

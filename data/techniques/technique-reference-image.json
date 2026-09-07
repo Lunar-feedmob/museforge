@@ -1,0 +1,43 @@
+{
+  "id": "technique-reference-image",
+  "name": "reference image",
+  "category": "Reference Image",
+  "description": "Use an uploaded image as a reference for identity or structure.",
+  "problem_it_solves": "Models can't match a specific face/object without a reference.",
+  "pattern": "use the uploaded [face/object] 100% as reference",
+  "implementation_guidance": "State what to preserve and what to change.",
+  "when_to_use": [
+    "character restyle",
+    "product from photo",
+    "editing"
+  ],
+  "when_not_to_use": [
+    "pure text-to-image"
+  ],
+  "good_examples": [
+    "use the uploaded face 100% as reference"
+  ],
+  "bad_examples": [
+    "make it look like the picture"
+  ],
+  "related_patterns": [
+    "pattern-double-exposure-portrait",
+    "pattern-cinematic-character-portrait"
+  ],
+  "related_recipes": [
+    "recipe-character-consistency",
+    "recipe-reference-restyle"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "awesome-nano-banana-images"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "reference",
+    "editing"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "technique-camera-lens",
+  "name": "camera & lens control",
+  "category": "Camera",
+  "description": "Specify camera, lens, and depth of field.",
+  "problem_it_solves": "Models default to generic framing.",
+  "pattern": "[focal length] lens, [aperture], [angle]",
+  "implementation_guidance": "Name focal length (35mm/85mm), DOF, and angle.",
+  "when_to_use": [
+    "photography",
+    "portraits",
+    "product shots"
+  ],
+  "when_not_to_use": [
+    "flat illustration"
+  ],
+  "good_examples": [
+    "professional 85mm lens photography with shallow depth of field"
+  ],
+  "bad_examples": [
+    "a nice photo"
+  ],
+  "related_patterns": [
+    "pattern-cinematic-character-portrait"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "camera",
+    "lens"
+  ]
+}

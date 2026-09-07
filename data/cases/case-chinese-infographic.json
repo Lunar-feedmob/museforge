@@ -1,0 +1,59 @@
+{
+  "id": "case-chinese-infographic",
+  "title": "中文信息图",
+  "category": "infographic",
+  "use_case": "education",
+  "user_intent": "A Chinese-language infographic.",
+  "input_type": "text-to-image",
+  "reference_requirements": "none",
+  "source": "synthetic",
+  "model": "gpt-image-2",
+  "original_prompt": "A Chinese-language infographic. Editorial magazine layout. Headline \"2026 AI 趋势\" in bold Chinese serif. Three data blocks with exact numbers and labels in clean sans-serif. Modern Chinese editorial style, red and ink accents on paper white. Structured grid, generous whitespace, text readability first.",
+  "visual_intent": "A clean Chinese infographic.",
+  "subject": "AI trends data",
+  "environment": "paper white",
+  "composition": "structured grid",
+  "lighting": "even",
+  "camera": "n/a",
+  "lens": "n/a",
+  "perspective": "flat editorial",
+  "style": "modern Chinese editorial",
+  "color": "red + ink + paper white",
+  "materials": "paper",
+  "typography": "bold Chinese serif headline",
+  "layout": "headline + three data blocks",
+  "supporting_elements": [
+    "icons",
+    "charts"
+  ],
+  "techniques": [
+    "text rendering",
+    "visual hierarchy"
+  ],
+  "constraints": [
+    "text readability first",
+    "accurate data"
+  ],
+  "negative_constraints": [
+    "no clutter"
+  ],
+  "tags": [
+    "chinese",
+    "infographic",
+    "editorial",
+    "data"
+  ],
+  "pattern_ids": [
+    "pattern-magazine-infographic"
+  ],
+  "style_ids": [
+    "style-modern-chinese-editorial"
+  ],
+  "technique_ids": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy"
+  ],
+  "recipe_ids": [
+    "recipe-infographic"
+  ]
+}

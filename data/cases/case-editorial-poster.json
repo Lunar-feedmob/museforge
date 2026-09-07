@@ -1,0 +1,58 @@
+{
+  "id": "case-editorial-poster",
+  "title": "编辑风海报",
+  "category": "poster",
+  "use_case": "marketing",
+  "user_intent": "An editorial text-first poster.",
+  "input_type": "text-to-image",
+  "reference_requirements": "none",
+  "source": "synthetic",
+  "model": "gpt-image-2",
+  "original_prompt": "An editorial text-first poster. Headline \"DESIGN IS INTELLIGENCE MADE VISIBLE\" in bold Swiss sans-serif. Supporting text in smaller refined type. A minimal geometric illustration. Swiss editorial style, high contrast black and white with one accent. Generous margins, text readability first.",
+  "visual_intent": "A Swiss editorial poster.",
+  "subject": "headline",
+  "environment": "clean background",
+  "composition": "text-first",
+  "lighting": "even",
+  "camera": "n/a",
+  "lens": "n/a",
+  "perspective": "flat",
+  "style": "Swiss editorial",
+  "color": "black + white + accent",
+  "materials": "paper",
+  "typography": "bold Swiss sans-serif",
+  "layout": "headline + text + illustration",
+  "supporting_elements": [
+    "geometric illustration"
+  ],
+  "techniques": [
+    "text rendering",
+    "visual hierarchy",
+    "whitespace"
+  ],
+  "constraints": [
+    "text readability first"
+  ],
+  "negative_constraints": [
+    "no clutter"
+  ],
+  "tags": [
+    "poster",
+    "editorial",
+    "swiss"
+  ],
+  "pattern_ids": [
+    "pattern-editorial-text-first-poster"
+  ],
+  "style_ids": [
+    "style-editorial-minimalism"
+  ],
+  "technique_ids": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy",
+    "technique-whitespace"
+  ],
+  "recipe_ids": [
+    "recipe-editorial-poster"
+  ]
+}

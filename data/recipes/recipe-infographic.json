@@ -1,0 +1,84 @@
+{
+  "id": "recipe-infographic",
+  "name": "Infographic",
+  "category": "infographic",
+  "goal": "A clear, beautiful data visualization.",
+  "description": "The method for an infographic.",
+  "required_inputs": [
+    "data",
+    "topic"
+  ],
+  "optional_inputs": [
+    "chart type",
+    "brand",
+    "icons"
+  ],
+  "workflow": [
+    "data",
+    "hierarchy",
+    "chart",
+    "type",
+    "color",
+    "whitespace"
+  ],
+  "steps": [
+    "Organize the data and its key message.",
+    "Establish a clear hierarchy (headline -> key data -> detail).",
+    "Choose the chart type.",
+    "Specify typography for labels and numbers.",
+    "Choose a restrained color palette.",
+    "Reserve whitespace between blocks."
+  ],
+  "decision_points": [
+    "chart type",
+    "palette"
+  ],
+  "recommended_patterns": [
+    "pattern-magazine-infographic"
+  ],
+  "recommended_styles": [
+    "style-modern-chinese-editorial",
+    "style-editorial-minimalism"
+  ],
+  "recommended_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Visual goal",
+    "Layout",
+    "Hierarchy",
+    "Style",
+    "Color",
+    "Typography",
+    "Constraints"
+  ],
+  "composition_guidance": "Structured grid, data hierarchy.",
+  "text_guidance": "Quote exact labels and numbers; specify font style.",
+  "constraints": [
+    "text readability first",
+    "accurate data"
+  ],
+  "common_failures": [
+    "text garble",
+    "data mislabel"
+  ],
+  "failure_recovery": [
+    "quote labels exactly",
+    "simplify the chart"
+  ],
+  "example_cases": [
+    "case-chinese-infographic"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "ai-image-prompt-cookbook"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "infographic",
+    "data",
+    "editorial"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "nano-banana-pro",
+  "name": "Nano Banana Pro",
+  "family": "gemini",
+  "provider": "Google",
+  "capabilities": [
+    "text-to-image",
+    "image editing",
+    "4K output",
+    "multilingual text"
+  ],
+  "strengths": [
+    "multilingual text accuracy",
+    "subject consistency",
+    "4K output"
+  ],
+  "limitations": [
+    "community-reported; no independent benchmark"
+  ],
+  "text_rendering": "strong multilingual text; quote exact text",
+  "consistency": "strong subject consistency reported",
+  "editing": "strong editing and reference workflows",
+  "prompt_style_notes": "Templated [VARIABLE] prompts are a practiced technique.",
+  "source_type": "repository-derived",
+  "source_references": [
+    "awesome-nano-banana-pro-prompts",
+    "awesome-nanobanana-pro"
+  ],
+  "tags": [
+    "google",
+    "text-rendering",
+    "consistency"
+  ]
+}

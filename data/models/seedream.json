@@ -1,0 +1,33 @@
+{
+  "id": "seedream",
+  "name": "Seedream",
+  "family": "seedream",
+  "provider": "ByteDance",
+  "capabilities": [
+    "text-to-image",
+    "image editing",
+    "precise typography",
+    "character consistency"
+  ],
+  "strengths": [
+    "precise typography",
+    "character consistency",
+    "4K generation"
+  ],
+  "limitations": [
+    "community-reported; no independent benchmark"
+  ],
+  "text_rendering": "precise typography reported",
+  "consistency": "character consistency reported",
+  "editing": "natural-language editing",
+  "prompt_style_notes": "Structured prompts (subject/style/composition/typography) work well.",
+  "source_type": "community-derived",
+  "source_references": [
+    "awesome-seedream-4.5"
+  ],
+  "tags": [
+    "bytedance",
+    "text-rendering",
+    "consistency"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "style-3d-commercial",
+  "name": "3D commercial",
+  "aliases": [
+    "3d",
+    "render",
+    "三维"
+  ],
+  "description": "Product render, studio lighting, clean 3D.",
+  "visual_characteristics": [
+    "3D render",
+    "studio lighting",
+    "clean surfaces"
+  ],
+  "composition_behavior": "product hero, three-quarter angle",
+  "color_behavior": "true product colors",
+  "lighting_behavior": "soft studio, diffused",
+  "typography_behavior": "clean sans-serif",
+  "material_behavior": "matte paperboard, glass, metal",
+  "texture_behavior": "smooth, realistic",
+  "best_for": [
+    "product renders",
+    "packaging",
+    "e-commerce"
+  ],
+  "avoid": [
+    "flat lighting",
+    "no shadows"
+  ],
+  "related_patterns": [
+    "pattern-floating-3d-product",
+    "pattern-breakout-product-hero"
+  ],
+  "related_techniques": [
+    "technique-product-preservation",
+    "technique-lighting-control"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "gpt-image2-skill",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "tags": [
+    "3d",
+    "render",
+    "product"
+  ]
+}

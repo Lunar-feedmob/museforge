@@ -1,0 +1,43 @@
+{
+  "id": "technique-whitespace",
+  "name": "whitespace / negative space",
+  "category": "Whitespace",
+  "description": "Reserve negative space for a clean, focused composition.",
+  "problem_it_solves": "Models fill every area with clutter.",
+  "pattern": "reserve negative space; controlled negative space",
+  "implementation_guidance": "State where the empty space should be and why.",
+  "when_to_use": [
+    "minimal posters",
+    "product ads",
+    "SaaS"
+  ],
+  "when_not_to_use": [
+    "dense infographics"
+  ],
+  "good_examples": [
+    "reserve negative space for the headline"
+  ],
+  "bad_examples": [
+    "make it minimal"
+  ],
+  "related_patterns": [
+    "pattern-editorial-text-first-poster",
+    "pattern-minimal-saas-illustration"
+  ],
+  "related_recipes": [
+    "recipe-editorial-poster",
+    "recipe-saas-landing-hero"
+  ],
+  "related_styles": [
+    "style-editorial-minimalism",
+    "style-premium-saas"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "whitespace",
+    "minimal"
+  ]
+}

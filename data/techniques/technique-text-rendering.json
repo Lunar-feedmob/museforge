@@ -1,0 +1,44 @@
+{
+  "id": "technique-text-rendering",
+  "name": "text rendering",
+  "category": "Typography",
+  "description": "Put exact text in quotes and specify font style for accurate text.",
+  "problem_it_solves": "Models garble or misspell text in images.",
+  "pattern": "\"EXACT TEXT\" in [font style]",
+  "implementation_guidance": "Quote every string; specify serif/sans/handwritten; keep text short.",
+  "when_to_use": [
+    "posters",
+    "infographics",
+    "ads with copy"
+  ],
+  "when_not_to_use": [
+    "pure photography without text"
+  ],
+  "good_examples": [
+    "\"MIDNIGHT REVERIE\" in bold art deco typography"
+  ],
+  "bad_examples": [
+    "some cool text on the poster"
+  ],
+  "related_patterns": [
+    "pattern-editorial-text-first-poster",
+    "pattern-magazine-infographic"
+  ],
+  "related_recipes": [
+    "recipe-editorial-poster",
+    "recipe-infographic"
+  ],
+  "related_styles": [
+    "style-editorial-minimalism",
+    "style-modern-chinese-editorial"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "gpt-image2-skill"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "text",
+    "typography"
+  ]
+}

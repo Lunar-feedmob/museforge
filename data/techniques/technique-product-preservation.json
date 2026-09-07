@@ -1,0 +1,43 @@
+{
+  "id": "technique-product-preservation",
+  "name": "product preservation",
+  "category": "Product Preservation",
+  "description": "Preserve critical product geometry and branding.",
+  "problem_it_solves": "Models distort or redesign the product.",
+  "pattern": "preserve [product] geometry; keep [brand] exact",
+  "implementation_guidance": "Name the product, its shape, label, and colors; forbid redesign.",
+  "when_to_use": [
+    "product ads",
+    "packaging",
+    "e-commerce"
+  ],
+  "when_not_to_use": [
+    "abstract art"
+  ],
+  "good_examples": [
+    "assemble the dieline into a flawless 3D box with accurate panels"
+  ],
+  "bad_examples": [
+    "make a cool bottle"
+  ],
+  "related_patterns": [
+    "pattern-breakout-product-hero",
+    "pattern-floating-3d-product"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-3d-commercial",
+    "style-luxury-commercial"
+  ],
+  "source_repositories": [
+    "gpt-image2-skill",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "product",
+    "brand"
+  ]
+}

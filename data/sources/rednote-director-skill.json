@@ -1,0 +1,13 @@
+{
+  "id": "rednote-director-skill",
+  "name": "mythkiven/rednote-director-skill",
+  "url": "https://github.com/mythkiven/rednote-director-skill",
+  "kind": "github",
+  "license": "unclear",
+  "allowed_usage": null,
+  "redistribution_status": "restricted",
+  "attribution_requirements": "Do not copy prompt text.",
+  "description": "Xiaohongshu visual-director agent skill.",
+  "last_checked": null,
+  "notes": ""
+}

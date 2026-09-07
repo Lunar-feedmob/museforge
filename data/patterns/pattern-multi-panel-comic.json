@@ -1,0 +1,75 @@
+{
+  "id": "pattern-multi-panel-comic",
+  "name": "Multi-panel Comic",
+  "aliases": [
+    "comic",
+    "storyboard",
+    "多格漫画"
+  ],
+  "category": "comic",
+  "description": "Grid of sequential panels with character consistency.",
+  "visual_goal": "Tell a story across panels.",
+  "best_for": [
+    "comics",
+    "storyboards",
+    "sequential art"
+  ],
+  "not_good_for": [
+    "single image"
+  ],
+  "composition": "strict grid, sequential panels",
+  "visual_hierarchy": "story flow across panels",
+  "subject_placement": "characters consistent across panels",
+  "foreground": "action",
+  "midground": "characters",
+  "background": "scene per panel",
+  "perspective": "varies per panel",
+  "lighting_strategy": "consistent per scene",
+  "color_strategy": "consistent palette",
+  "typography_strategy": "minimal or none",
+  "negative_space_strategy": "panel gutters",
+  "supporting_elements": [
+    "speech bubbles (optional)"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Story",
+    "Layout",
+    "Style",
+    "Color",
+    "Constraints"
+  ],
+  "constraints": [
+    "character consistency",
+    "no text unless specified"
+  ],
+  "common_failures": [
+    "character drift",
+    "panel misalignment"
+  ],
+  "related_styles": [
+    "style-cinematic-realism",
+    "style-flat-vector"
+  ],
+  "related_techniques": [
+    "technique-character-consistency",
+    "technique-multi-panel-grid",
+    "technique-negative-constraints"
+  ],
+  "related_recipes": [
+    "recipe-multi-panel-comic"
+  ],
+  "example_cases": [
+    "case-multi-panel-comic"
+  ],
+  "source_repositories": [
+    "awesome-nano-banana-images",
+    "awesome-nano-banana-pro-prompts"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "comic",
+    "storyboard",
+    "sequential"
+  ]
+}

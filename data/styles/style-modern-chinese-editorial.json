@@ -1,0 +1,48 @@
+{
+  "id": "style-modern-chinese-editorial",
+  "name": "modern Chinese editorial",
+  "aliases": [
+    "中文编辑",
+    "国风",
+    "chinese editorial"
+  ],
+  "description": "Chinese typography, red/ink accents, structured editorial grid.",
+  "visual_characteristics": [
+    "Chinese typography",
+    "red/ink accents",
+    "editorial grid"
+  ],
+  "composition_behavior": "structured grid with strong headline",
+  "color_behavior": "red, ink black, paper white",
+  "lighting_behavior": "even, editorial",
+  "typography_behavior": "bold Chinese headline, refined supporting type",
+  "material_behavior": "paper, ink",
+  "texture_behavior": "subtle paper grain",
+  "best_for": [
+    "Chinese infographics",
+    "Xiaohongshu covers",
+    "editorial posters"
+  ],
+  "avoid": [
+    "western-only typography",
+    "clutter"
+  ],
+  "related_patterns": [
+    "pattern-magazine-infographic",
+    "pattern-editorial-text-first-poster"
+  ],
+  "related_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "ai-image-prompt-cookbook",
+    "rednote-director-skill"
+  ],
+  "tags": [
+    "chinese",
+    "editorial",
+    "infographic"
+  ]
+}

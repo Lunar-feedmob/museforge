@@ -1,0 +1,48 @@
+{
+  "id": "dna-luxury-product-shot",
+  "name": "Luxury Product Shot DNA",
+  "category": "product",
+  "description": "The composable structure of a luxury product shot.",
+  "components": [
+    "product",
+    "dark water",
+    "flowers",
+    "golden hour glow",
+    "reflections",
+    "shallow depth of field",
+    "high-end commercial photography"
+  ],
+  "pattern": "product + dark water + flowers + golden hour + reflections + shallow DOF + commercial",
+  "variables": [
+    "product",
+    "flower type",
+    "lighting style"
+  ],
+  "best_for": [
+    "luxury product ads",
+    "perfume",
+    "beverages"
+  ],
+  "related_patterns": [
+    "pattern-centered-luxury-product"
+  ],
+  "related_techniques": [
+    "technique-lighting-control",
+    "technique-templated-variables"
+  ],
+  "related_styles": [
+    "style-luxury-commercial"
+  ],
+  "source_families": [
+    "luxury product"
+  ],
+  "source_repositories": [
+    "awesome-nanobanana-pro"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "luxury",
+    "product",
+    "dna"
+  ]
+}

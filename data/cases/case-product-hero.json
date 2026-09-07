@@ -1,0 +1,61 @@
+{
+  "id": "case-product-hero",
+  "title": "产品 Hero 广告",
+  "category": "product advertisement",
+  "use_case": "product marketing",
+  "user_intent": "A breakout product hero ad.",
+  "input_type": "text-to-image",
+  "reference_requirements": "product reference optional",
+  "source": "synthetic",
+  "model": "gpt-image-2",
+  "original_prompt": "A breakout product hero advertisement. A premium skincare bottle breaking through the frame with forced perspective and foreground overlap. Particles and droplets around it. Commercial lighting with rim highlights. Preserve the bottle geometry and label exactly. Controlled negative space, luxury commercial style.",
+  "visual_intent": "A breakout product hero.",
+  "subject": "skincare bottle",
+  "environment": "clean gradient",
+  "composition": "breakout + forced perspective",
+  "lighting": "commercial rim",
+  "camera": "three-quarter",
+  "lens": "n/a",
+  "perspective": "slight low angle",
+  "style": "luxury commercial",
+  "color": "product + neutral + accent",
+  "materials": "glass, liquid",
+  "typography": "label text",
+  "layout": "centered breakout",
+  "supporting_elements": [
+    "particles",
+    "droplets"
+  ],
+  "techniques": [
+    "product preservation",
+    "subject hierarchy",
+    "lighting control"
+  ],
+  "constraints": [
+    "preserve geometry",
+    "protect label"
+  ],
+  "negative_constraints": [
+    "no clutter"
+  ],
+  "tags": [
+    "product",
+    "hero",
+    "breakout",
+    "commercial"
+  ],
+  "pattern_ids": [
+    "pattern-breakout-product-hero"
+  ],
+  "style_ids": [
+    "style-luxury-commercial"
+  ],
+  "technique_ids": [
+    "technique-product-preservation",
+    "technique-subject-hierarchy",
+    "technique-lighting-control"
+  ],
+  "recipe_ids": [
+    "recipe-product-hero-ad"
+  ]
+}

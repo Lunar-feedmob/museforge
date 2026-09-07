@@ -1,0 +1,68 @@
+{
+  "id": "pattern-layered-depth-product-ad",
+  "name": "Layered Depth Product Ad",
+  "aliases": [
+    "layered product",
+    "depth ad"
+  ],
+  "category": "product advertisement",
+  "description": "Foreground/midground/background separation for depth.",
+  "visual_goal": "A product ad with real depth.",
+  "best_for": [
+    "product ads",
+    "campaigns"
+  ],
+  "not_good_for": [
+    "flat illustration"
+  ],
+  "composition": "foreground/midground/background separation",
+  "visual_hierarchy": "product in midground, depth around it",
+  "subject_placement": "product midground",
+  "foreground": "blurred foreground element",
+  "midground": "product",
+  "background": "environment",
+  "perspective": "slight low angle",
+  "lighting_strategy": "commercial, layered",
+  "color_strategy": "product + environment",
+  "typography_strategy": "minimal",
+  "negative_space_strategy": "controlled",
+  "supporting_elements": [
+    "foreground bokeh"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Lighting",
+    "Constraints"
+  ],
+  "constraints": [
+    "preserve product geometry"
+  ],
+  "common_failures": [
+    "flat composition"
+  ],
+  "related_styles": [
+    "style-luxury-commercial",
+    "style-3d-commercial"
+  ],
+  "related_techniques": [
+    "technique-subject-hierarchy",
+    "technique-lighting-control"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "example_cases": [
+    "case-fintech-card"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "product",
+    "depth",
+    "commercial"
+  ]
+}

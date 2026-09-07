@@ -1,0 +1,74 @@
+{
+  "id": "recipe-app-screenshot-ad",
+  "name": "App Screenshot Ad",
+  "category": "product hero",
+  "goal": "An app screenshot advertisement.",
+  "description": "The method for an app screenshot ad.",
+  "required_inputs": [
+    "app name",
+    "screenshot",
+    "platform"
+  ],
+  "optional_inputs": [
+    "caption",
+    "device frame"
+  ],
+  "workflow": [
+    "app",
+    "screenshot",
+    "device",
+    "caption",
+    "platform"
+  ],
+  "steps": [
+    "Identify the app and its screenshot.",
+    "Place the screenshot in a device frame.",
+    "Add a caption or headline.",
+    "Respect platform constraints."
+  ],
+  "decision_points": [
+    "device frame",
+    "caption"
+  ],
+  "recommended_patterns": [
+    "pattern-hero-device-composition"
+  ],
+  "recommended_styles": [
+    "style-premium-saas"
+  ],
+  "recommended_techniques": [
+    "technique-text-rendering",
+    "technique-product-preservation"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Style",
+    "Constraints"
+  ],
+  "composition_guidance": "Device hero with screenshot.",
+  "text_guidance": "Quote exact UI text and caption.",
+  "constraints": [
+    "preserve UI text",
+    "platform constraints"
+  ],
+  "common_failures": [
+    "UI text garble"
+  ],
+  "failure_recovery": [
+    "quote UI text exactly"
+  ],
+  "example_cases": [
+    "case-saas-hero"
+  ],
+  "source_repositories": [
+    "gpt-image2-skill"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "app",
+    "screenshot",
+    "ad"
+  ]
+}

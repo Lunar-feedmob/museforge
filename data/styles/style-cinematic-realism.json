@@ -1,0 +1,48 @@
+{
+  "id": "style-cinematic-realism",
+  "name": "cinematic realism",
+  "aliases": [
+    "photoreal",
+    "写实",
+    "cinematic"
+  ],
+  "description": "85mm, shallow DOF, film grain, cinematic color grade.",
+  "visual_characteristics": [
+    "shallow depth of field",
+    "film grain",
+    "cinematic grade"
+  ],
+  "composition_behavior": "subject-forward, rule of thirds",
+  "color_behavior": "warm desaturated or teal-orange grade",
+  "lighting_behavior": "motivated, high-contrast",
+  "typography_behavior": "n/a (photography)",
+  "material_behavior": "real textures",
+  "texture_behavior": "natural skin texture, fabric detail",
+  "best_for": [
+    "portraits",
+    "documentary",
+    "cinematic scenes"
+  ],
+  "avoid": [
+    "flat lighting",
+    "over-saturation"
+  ],
+  "related_patterns": [
+    "pattern-cinematic-character-portrait",
+    "pattern-double-exposure-portrait"
+  ],
+  "related_techniques": [
+    "technique-camera-lens",
+    "technique-lighting-control",
+    "technique-color-grading"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "tags": [
+    "cinematic",
+    "photoreal",
+    "portrait"
+  ]
+}

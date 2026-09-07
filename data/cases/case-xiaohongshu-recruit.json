@@ -1,0 +1,63 @@
+{
+  "id": "case-xiaohongshu-recruit",
+  "title": "AI 公司招聘小红书封面",
+  "category": "social media poster",
+  "use_case": "recruitment marketing",
+  "user_intent": "A Xiaohongshu recruitment cover for an AI company, 3:4, minimal, professional.",
+  "input_type": "text-to-image",
+  "reference_requirements": "none",
+  "source": "synthetic",
+  "model": "gpt-image-2",
+  "original_prompt": "A 3:4 Xiaohongshu recruitment cover for an AI company. Text-first editorial layout. Headline \"我们在招人\" in bold modern Chinese sans-serif. Supporting text \"AI 工程师 · 产品经理 · 设计师\" in smaller refined type. Minimal illustration of a small geometric AI motif. Editorial minimalism style, muted off-white background, one accent color. Generous negative space, low visual density, text readability first.",
+  "visual_intent": "A clean, text-first recruitment cover.",
+  "subject": "recruitment headline",
+  "environment": "clean off-white background",
+  "composition": "text-first, single focal point",
+  "lighting": "even, soft",
+  "camera": "n/a",
+  "lens": "n/a",
+  "perspective": "flat editorial",
+  "style": "editorial minimalism",
+  "color": "off-white + one accent",
+  "materials": "paper",
+  "typography": "bold Chinese sans-serif headline",
+  "layout": "headline top, supporting text below, small motif",
+  "supporting_elements": [
+    "geometric AI motif"
+  ],
+  "techniques": [
+    "text rendering",
+    "visual hierarchy",
+    "whitespace"
+  ],
+  "constraints": [
+    "3:4",
+    "text readability first",
+    "low density"
+  ],
+  "negative_constraints": [
+    "no clutter",
+    "no photorealism"
+  ],
+  "tags": [
+    "xiaohongshu",
+    "recruitment",
+    "editorial",
+    "minimal"
+  ],
+  "pattern_ids": [
+    "pattern-editorial-text-first-poster"
+  ],
+  "style_ids": [
+    "style-editorial-minimalism"
+  ],
+  "technique_ids": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy",
+    "technique-whitespace"
+  ],
+  "recipe_ids": [
+    "recipe-xiaohongshu-info-card",
+    "recipe-editorial-poster"
+  ]
+}

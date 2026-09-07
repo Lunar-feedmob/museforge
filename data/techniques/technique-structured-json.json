@@ -1,0 +1,40 @@
+{
+  "id": "technique-structured-json",
+  "name": "structured JSON prompting",
+  "category": "Prompt Structure",
+  "description": "Use a typed JSON schema (meta/subject/scene) for reproducible prompts.",
+  "problem_it_solves": "Prose prompts are hard to reuse and compare.",
+  "pattern": "{\"meta\": {...}, \"subject\": [...], \"scene\": {...}}",
+  "implementation_guidance": "Declare aspect_ratio, guidance, typed subjects, and scene.",
+  "when_to_use": [
+    "reproducible pipelines",
+    "agent workflows"
+  ],
+  "when_not_to_use": [
+    "casual one-off prompts"
+  ],
+  "good_examples": [
+    "a JSON schema with typed subject and scene"
+  ],
+  "bad_examples": [
+    "a long prose blob"
+  ],
+  "related_patterns": [
+    "pattern-breakout-product-hero"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-3d-commercial"
+  ],
+  "source_repositories": [
+    "nano-banana-json-schema",
+    "gpt-image2-skill"
+  ],
+  "confidence": 0.75,
+  "tags": [
+    "json",
+    "structured"
+  ]
+}

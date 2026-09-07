@@ -1,0 +1,40 @@
+{
+  "id": "technique-brand-preservation",
+  "name": "brand preservation",
+  "category": "Brand Preservation",
+  "description": "Protect branding: exact name, logo, and brand colors.",
+  "problem_it_solves": "Models alter or invent brand elements.",
+  "pattern": "protect branding; exact [brand] name and logo",
+  "implementation_guidance": "State the brand name in quotes; specify logo placement and colors.",
+  "when_to_use": [
+    "branded ads",
+    "campaigns"
+  ],
+  "when_not_to_use": [
+    "unbranded concepts"
+  ],
+  "good_examples": [
+    "the box front reads \"AURAE / COLD-BREW MATCHA\""
+  ],
+  "bad_examples": [
+    "a nice logo"
+  ],
+  "related_patterns": [
+    "pattern-breakout-product-hero"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad",
+    "recipe-fintech-card-ad"
+  ],
+  "related_styles": [
+    "style-luxury-commercial"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "brand",
+    "logo"
+  ]
+}

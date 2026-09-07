@@ -1,0 +1,114 @@
+{
+  "description": "A prompt-engineering lever that affects output quality.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "category": {
+      "default": "",
+      "title": "Category",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "problem_it_solves": {
+      "default": "",
+      "title": "Problem It Solves",
+      "type": "string"
+    },
+    "pattern": {
+      "default": "",
+      "title": "Pattern",
+      "type": "string"
+    },
+    "implementation_guidance": {
+      "default": "",
+      "title": "Implementation Guidance",
+      "type": "string"
+    },
+    "when_to_use": {
+      "items": {
+        "type": "string"
+      },
+      "title": "When To Use",
+      "type": "array"
+    },
+    "when_not_to_use": {
+      "items": {
+        "type": "string"
+      },
+      "title": "When Not To Use",
+      "type": "array"
+    },
+    "good_examples": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Good Examples",
+      "type": "array"
+    },
+    "bad_examples": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Bad Examples",
+      "type": "array"
+    },
+    "related_patterns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Patterns",
+      "type": "array"
+    },
+    "related_recipes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Recipes",
+      "type": "array"
+    },
+    "related_styles": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Styles",
+      "type": "array"
+    },
+    "source_repositories": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Repositories",
+      "type": "array"
+    },
+    "confidence": {
+      "default": 0.5,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "title": "Technique",
+  "type": "object"
+}

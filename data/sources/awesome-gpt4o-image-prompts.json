@@ -1,0 +1,13 @@
+{
+  "id": "awesome-gpt4o-image-prompts",
+  "name": "ImgEdify/Awesome-GPT4o-Image-Prompts",
+  "url": "https://github.com/ImgEdify/Awesome-GPT4o-Image-Prompts",
+  "kind": "github",
+  "license": "MIT",
+  "allowed_usage": null,
+  "redistribution_status": "allowed",
+  "attribution_requirements": "MIT notice.",
+  "description": "Bilingual GPT-4o prompt dictionary (Chinese exemplars).",
+  "last_checked": null,
+  "notes": ""
+}

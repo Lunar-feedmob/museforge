@@ -1,0 +1,49 @@
+{
+  "id": "dna-cinematic-portrait",
+  "name": "Cinematic Portrait DNA",
+  "category": "photography",
+  "description": "The composable structure of a cinematic portrait.",
+  "components": [
+    "subject",
+    "85mm lens",
+    "shallow depth of field",
+    "soft key + rim light",
+    "warm desaturated grade",
+    "film grain",
+    "editorial mood"
+  ],
+  "pattern": "subject + 85mm + shallow DOF + key/rim light + warm grade + film grain + editorial mood",
+  "variables": [
+    "subject",
+    "environment",
+    "grade"
+  ],
+  "best_for": [
+    "portraits",
+    "fashion",
+    "character shots"
+  ],
+  "related_patterns": [
+    "pattern-cinematic-character-portrait"
+  ],
+  "related_techniques": [
+    "technique-camera-lens",
+    "technique-lighting-control",
+    "technique-color-grading"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "source_families": [
+    "cinematic portrait"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "portrait",
+    "cinematic",
+    "dna"
+  ]
+}

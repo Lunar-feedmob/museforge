@@ -1,0 +1,50 @@
+{
+  "id": "dna-breakout-product-hero",
+  "name": "Breakout Product Hero DNA",
+  "category": "product",
+  "description": "The composable structure of a breakout product hero.",
+  "components": [
+    "hero object",
+    "forced perspective",
+    "foreground overlap",
+    "frame/device breakout",
+    "particles",
+    "commercial lighting",
+    "secondary supporting elements",
+    "controlled negative space"
+  ],
+  "pattern": "hero object + forced perspective + foreground overlap + particles + commercial lighting + negative space",
+  "variables": [
+    "product",
+    "metaphor",
+    "lighting",
+    "particles"
+  ],
+  "best_for": [
+    "product ads",
+    "launch campaigns"
+  ],
+  "related_patterns": [
+    "pattern-breakout-product-hero"
+  ],
+  "related_techniques": [
+    "technique-product-preservation",
+    "technique-subject-hierarchy"
+  ],
+  "related_styles": [
+    "style-luxury-commercial",
+    "style-3d-commercial"
+  ],
+  "source_families": [
+    "product hero"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "product",
+    "hero",
+    "dna"
+  ]
+}

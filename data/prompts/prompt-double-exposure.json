@@ -1,0 +1,26 @@
+{
+  "id": "prompt-double-exposure",
+  "title": "Double-exposure fashion portrait",
+  "original_prompt": "A cinematic double-exposure fashion portrait featuring a woman with the uploaded face used 100% as reference, wearing stylish metallic aviator sunglasses. The composition blends a large semi-transparent close-up profile of her face on the left with her full-body figure on the right. Minimalist neutral studio setting. Warm desaturated sepia and charcoal palette, soft golden-orange light-leak flare. Professional 85mm lens, high-contrast soft cinematic lighting, natural skin texture, luxury fashion-editorial aesthetic.",
+  "source_repo": "freestylefly-awesome-gpt-image-2",
+  "source_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+  "author": "@Anaya_Ai12",
+  "license": "MIT",
+  "target_model": "gpt-image-2",
+  "category": "photography",
+  "tags": [
+    "portrait",
+    "double-exposure",
+    "fashion"
+  ],
+  "why_it_is_good": "Combines reference-image technique with a strong compositional device.",
+  "techniques_used": [
+    "reference image",
+    "camera & lens control",
+    "color grading"
+  ],
+  "visual_pattern": "Double-exposure Portrait",
+  "style": "cinematic realism",
+  "prompt_dna": "Cinematic Portrait DNA",
+  "tier": "annotated"
+}

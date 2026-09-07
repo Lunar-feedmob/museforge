@@ -1,0 +1,59 @@
+{
+  "id": "case-cinematic-portrait",
+  "title": "写实人物摄影",
+  "category": "photography",
+  "use_case": "photography",
+  "user_intent": "A realistic cinematic character portrait.",
+  "input_type": "text-to-image",
+  "reference_requirements": "optional reference face",
+  "source": "synthetic",
+  "model": "gpt-image-2",
+  "original_prompt": "A cinematic character portrait. A woman with long dark hair, natural skin texture, confident expression. 85mm lens, shallow depth of field, soft key light with rim light. Warm desaturated sepia and charcoal color grade, subtle film grain. Minimal neutral studio background. Editorial mood, premium magazine quality.",
+  "visual_intent": "A cinematic editorial portrait.",
+  "subject": "woman with dark hair",
+  "environment": "minimal studio",
+  "composition": "subject-forward, rule of thirds",
+  "lighting": "soft key + rim",
+  "camera": "85mm",
+  "lens": "shallow depth of field",
+  "perspective": "eye-level",
+  "style": "cinematic realism",
+  "color": "warm desaturated sepia/charcoal",
+  "materials": "fabric, skin",
+  "typography": "n/a",
+  "layout": "portrait",
+  "supporting_elements": [
+    "film grain"
+  ],
+  "techniques": [
+    "camera & lens control",
+    "lighting control",
+    "color grading"
+  ],
+  "constraints": [
+    "natural skin texture"
+  ],
+  "negative_constraints": [
+    "no over-smoothing",
+    "no plastic skin"
+  ],
+  "tags": [
+    "portrait",
+    "cinematic",
+    "photography"
+  ],
+  "pattern_ids": [
+    "pattern-cinematic-character-portrait"
+  ],
+  "style_ids": [
+    "style-cinematic-realism"
+  ],
+  "technique_ids": [
+    "technique-camera-lens",
+    "technique-lighting-control",
+    "technique-color-grading"
+  ],
+  "recipe_ids": [
+    "recipe-character-consistency"
+  ]
+}

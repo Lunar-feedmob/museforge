@@ -1,0 +1,13 @@
+{
+  "id": "gpt-image2-skill",
+  "name": "wuyoscar/GPT-Image2-Skill",
+  "url": "https://github.com/wuyoscar/GPT-Image2-Skill",
+  "kind": "github",
+  "license": "MIT",
+  "allowed_usage": null,
+  "redistribution_status": "allowed",
+  "attribution_requirements": "MIT notice.",
+  "description": "GPT Image 2 gallery + agent skill + CLI, JSON-style prompts.",
+  "last_checked": null,
+  "notes": ""
+}

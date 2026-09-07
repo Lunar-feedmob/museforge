@@ -1,0 +1,50 @@
+{
+  "id": "style-luxury-commercial",
+  "name": "luxury commercial",
+  "aliases": [
+    "premium",
+    "high-end",
+    "奢华",
+    "高端"
+  ],
+  "description": "Dark, reflective, golden-hour, high-end product aesthetic.",
+  "visual_characteristics": [
+    "dark reflective surfaces",
+    "golden-hour glow",
+    "premium materials"
+  ],
+  "composition_behavior": "centered hero with controlled negative space",
+  "color_behavior": "deep tones + gold/amber accents",
+  "lighting_behavior": "dramatic rim light, soft reflections",
+  "typography_behavior": "elegant serif or refined sans",
+  "material_behavior": "glass, metal, water",
+  "texture_behavior": "smooth, reflective",
+  "best_for": [
+    "luxury product ads",
+    "fintech cards",
+    "premium branding"
+  ],
+  "avoid": [
+    "flat lighting",
+    "busy backgrounds"
+  ],
+  "related_patterns": [
+    "pattern-centered-luxury-product",
+    "pattern-breakout-product-hero"
+  ],
+  "related_techniques": [
+    "technique-lighting-control",
+    "technique-color-grading",
+    "technique-product-preservation"
+  ],
+  "example_cases": [],
+  "source_repositories": [
+    "awesome-nanobanana-pro",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "tags": [
+    "luxury",
+    "premium",
+    "commercial"
+  ]
+}

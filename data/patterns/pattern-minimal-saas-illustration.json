@@ -1,0 +1,71 @@
+{
+  "id": "pattern-minimal-saas-illustration",
+  "name": "Minimal SaaS Illustration",
+  "aliases": [
+    "saas illustration",
+    "flat illustration"
+  ],
+  "category": "product hero",
+  "description": "Flat vector + device + negative space + brand color.",
+  "visual_goal": "A clean, modern product visual.",
+  "best_for": [
+    "SaaS landing heroes",
+    "app marketing"
+  ],
+  "not_good_for": [
+    "photoreal product shots"
+  ],
+  "composition": "device hero with minimal illustration",
+  "visual_hierarchy": "product/device first",
+  "subject_placement": "centered device",
+  "foreground": "device",
+  "midground": "minimal illustration",
+  "background": "brand color or neutral",
+  "perspective": "front or slight angle",
+  "lighting_strategy": "soft, even",
+  "color_strategy": "brand color + neutral",
+  "typography_strategy": "clean sans-serif",
+  "negative_space_strategy": "generous",
+  "supporting_elements": [
+    "floating UI cards"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Style",
+    "Color",
+    "Constraints"
+  ],
+  "constraints": [
+    "flat, no photorealism"
+  ],
+  "common_failures": [
+    "clutter",
+    "inconsistent brand color"
+  ],
+  "related_styles": [
+    "style-premium-saas",
+    "style-flat-vector"
+  ],
+  "related_techniques": [
+    "technique-whitespace",
+    "technique-visual-hierarchy"
+  ],
+  "related_recipes": [
+    "recipe-saas-landing-hero"
+  ],
+  "example_cases": [
+    "case-saas-hero"
+  ],
+  "source_repositories": [
+    "gpt-image2-skill",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "saas",
+    "flat",
+    "hero"
+  ]
+}

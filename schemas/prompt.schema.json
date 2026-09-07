@@ -1,0 +1,153 @@
+{
+  "$defs": {
+    "PromptTier": {
+      "enum": [
+        "original",
+        "annotated",
+        "refined",
+        "enhanced"
+      ],
+      "title": "PromptTier",
+      "type": "string"
+    }
+  },
+  "description": "A single, attributed prompt.\n\nThe only entity that may carry verbatim third-party text, and only when the license\npermits redistribution. Otherwise store metadata + source URL + derived analysis only.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "original_prompt": {
+      "title": "Original Prompt",
+      "type": "string"
+    },
+    "source_repo": {
+      "title": "Source Repo",
+      "type": "string"
+    },
+    "source_url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Url"
+    },
+    "author": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Author"
+    },
+    "license": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "License"
+    },
+    "target_model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Model"
+    },
+    "category": {
+      "default": "",
+      "title": "Category",
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
+    "why_it_is_good": {
+      "default": "",
+      "title": "Why It Is Good",
+      "type": "string"
+    },
+    "techniques_used": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Techniques Used",
+      "type": "array"
+    },
+    "visual_pattern": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Visual Pattern"
+    },
+    "style": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Style"
+    },
+    "prompt_dna": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Dna"
+    },
+    "tier": {
+      "$ref": "#/$defs/PromptTier",
+      "default": "original"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "original_prompt",
+    "source_repo"
+  ],
+  "title": "Prompt",
+  "type": "object"
+}

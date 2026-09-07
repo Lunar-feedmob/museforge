@@ -1,0 +1,129 @@
+{
+  "description": "The designed plan produced by the Creative Director (the *output* entity).",
+  "properties": {
+    "concept": {
+      "default": "",
+      "title": "Concept",
+      "type": "string"
+    },
+    "goal": {
+      "default": "",
+      "title": "Goal",
+      "type": "string"
+    },
+    "recommended_recipe": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recommended Recipe"
+    },
+    "recommended_pattern": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recommended Pattern"
+    },
+    "recommended_style": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recommended Style"
+    },
+    "visual_hierarchy": {
+      "default": "",
+      "title": "Visual Hierarchy",
+      "type": "string"
+    },
+    "composition": {
+      "default": "",
+      "title": "Composition",
+      "type": "string"
+    },
+    "subject_strategy": {
+      "default": "",
+      "title": "Subject Strategy",
+      "type": "string"
+    },
+    "environment": {
+      "default": "",
+      "title": "Environment",
+      "type": "string"
+    },
+    "perspective": {
+      "default": "",
+      "title": "Perspective",
+      "type": "string"
+    },
+    "lighting": {
+      "default": "",
+      "title": "Lighting",
+      "type": "string"
+    },
+    "color_palette": {
+      "default": "",
+      "title": "Color Palette",
+      "type": "string"
+    },
+    "typography": {
+      "default": "",
+      "title": "Typography",
+      "type": "string"
+    },
+    "supporting_elements": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Elements",
+      "type": "array"
+    },
+    "negative_space": {
+      "default": "",
+      "title": "Negative Space",
+      "type": "string"
+    },
+    "visual_density": {
+      "default": "",
+      "title": "Visual Density",
+      "type": "string"
+    },
+    "constraints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "avoid": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Avoid",
+      "type": "array"
+    },
+    "rationale": {
+      "default": "",
+      "title": "Rationale",
+      "type": "string"
+    }
+  },
+  "title": "CreativeDirection",
+  "type": "object"
+}

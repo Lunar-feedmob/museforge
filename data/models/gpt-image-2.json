@@ -1,0 +1,35 @@
+{
+  "id": "gpt-image-2",
+  "name": "GPT Image 2",
+  "family": "gpt-image",
+  "provider": "OpenAI",
+  "capabilities": [
+    "text-to-image",
+    "image editing",
+    "pixel-perfect text",
+    "cross-image consistency"
+  ],
+  "strengths": [
+    "pixel-perfect text rendering",
+    "cross-image consistency",
+    "commercial illustration"
+  ],
+  "limitations": [
+    "community-reported; no independent benchmark"
+  ],
+  "text_rendering": "pixel-perfect; quote exact text and specify type style",
+  "consistency": "strong cross-image consistency reported",
+  "editing": "reference-based generation and editing",
+  "prompt_style_notes": "JSON-style structured prompts are a practiced technique.",
+  "source_type": "repository-derived",
+  "source_references": [
+    "awesome-gpt-image-2",
+    "freestylefly-awesome-gpt-image-2",
+    "gpt-image2-skill"
+  ],
+  "tags": [
+    "openai",
+    "text-rendering",
+    "consistency"
+  ]
+}

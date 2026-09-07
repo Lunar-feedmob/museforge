@@ -1,0 +1,156 @@
+{
+  "description": "A method for completing a class of image task. The most valuable entity.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "category": {
+      "default": "",
+      "title": "Category",
+      "type": "string"
+    },
+    "goal": {
+      "default": "",
+      "title": "Goal",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "required_inputs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Inputs",
+      "type": "array"
+    },
+    "optional_inputs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Optional Inputs",
+      "type": "array"
+    },
+    "workflow": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Workflow",
+      "type": "array"
+    },
+    "steps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Steps",
+      "type": "array"
+    },
+    "decision_points": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Decision Points",
+      "type": "array"
+    },
+    "recommended_patterns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Recommended Patterns",
+      "type": "array"
+    },
+    "recommended_styles": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Recommended Styles",
+      "type": "array"
+    },
+    "recommended_techniques": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Recommended Techniques",
+      "type": "array"
+    },
+    "prompt_structure": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Prompt Structure",
+      "type": "array"
+    },
+    "composition_guidance": {
+      "default": "",
+      "title": "Composition Guidance",
+      "type": "string"
+    },
+    "text_guidance": {
+      "default": "",
+      "title": "Text Guidance",
+      "type": "string"
+    },
+    "constraints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "common_failures": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Common Failures",
+      "type": "array"
+    },
+    "failure_recovery": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Failure Recovery",
+      "type": "array"
+    },
+    "example_cases": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Example Cases",
+      "type": "array"
+    },
+    "source_repositories": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Repositories",
+      "type": "array"
+    },
+    "confidence": {
+      "default": 0.5,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "title": "Recipe",
+  "type": "object"
+}

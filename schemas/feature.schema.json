@@ -1,0 +1,64 @@
+{
+  "description": "A product feature mined from a source repository.",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "source_repo": {
+      "default": "",
+      "title": "Source Repo",
+      "type": "string"
+    },
+    "source_url": {
+      "default": "",
+      "title": "Source Url",
+      "type": "string"
+    },
+    "why_it_is_good": {
+      "default": "",
+      "title": "Why It Is Good",
+      "type": "string"
+    },
+    "user_value": {
+      "default": "",
+      "title": "User Value",
+      "type": "string"
+    },
+    "implementation_complexity": {
+      "default": "low",
+      "title": "Implementation Complexity",
+      "type": "string"
+    },
+    "adoption_priority": {
+      "default": "Later",
+      "title": "Adoption Priority",
+      "type": "string"
+    },
+    "should_museforge_adopt": {
+      "default": false,
+      "title": "Should Museforge Adopt",
+      "type": "boolean"
+    },
+    "how_museforge_can_improve_it": {
+      "default": "",
+      "title": "How Museforge Can Improve It",
+      "type": "string"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "title": "Feature",
+  "type": "object"
+}

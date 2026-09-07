@@ -1,0 +1,26 @@
+{
+  "id": "prompt-product-box-dieline",
+  "title": "3D product box from dieline",
+  "original_prompt": "Assemble the dieline into a flawless 3D box with accurate panels, clean folds, undistorted type, and artwork preserved exactly. Shoot it upright at a refined three-quarter angle in a minimal premium studio setting with a soft neutral background, diffused light, subtle shadows, no props, true colours, matte paperboard texture. The box front reads \"AURAE / COLD-BREW MATCHA / 12 fl oz\" in clean sans-serif. Side panel shows small ingredient list in 8pt type.",
+  "source_repo": "gpt-image2-skill",
+  "source_url": "https://github.com/wuyoscar/GPT-Image2-Skill",
+  "author": "wuyoscar",
+  "license": "MIT",
+  "target_model": "gpt-image-2",
+  "category": "product advertisement",
+  "tags": [
+    "product",
+    "packaging",
+    "3d"
+  ],
+  "why_it_is_good": "Product preservation + text rendering in one production prompt.",
+  "techniques_used": [
+    "product preservation",
+    "text rendering",
+    "lighting control"
+  ],
+  "visual_pattern": "Floating 3D Product Scene",
+  "style": "3D commercial",
+  "prompt_dna": "Breakout Product Hero DNA",
+  "tier": "annotated"
+}

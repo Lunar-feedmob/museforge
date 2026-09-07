@@ -1,0 +1,70 @@
+{
+  "id": "pattern-double-exposure-portrait",
+  "name": "Double-exposure Portrait",
+  "aliases": [
+    "double exposure",
+    "双重曝光"
+  ],
+  "category": "photography",
+  "description": "Subject + layered semi-transparent profile.",
+  "visual_goal": "A striking, layered portrait.",
+  "best_for": [
+    "fashion editorials",
+    "art portraits"
+  ],
+  "not_good_for": [
+    "product ads"
+  ],
+  "composition": "layered semi-transparent profile + full figure",
+  "visual_hierarchy": "face first, layered profile second",
+  "subject_placement": "profile left, figure right",
+  "foreground": "semi-transparent profile",
+  "midground": "full figure",
+  "background": "minimal studio",
+  "perspective": "eye-level",
+  "lighting_strategy": "soft cinematic, high contrast",
+  "color_strategy": "warm desaturated sepia/charcoal",
+  "typography_strategy": "n/a",
+  "negative_space_strategy": "minimal background",
+  "supporting_elements": [
+    "light leak",
+    "film grain"
+  ],
+  "prompt_structure": [
+    "Subject",
+    "Composition",
+    "Lighting",
+    "Color",
+    "Mood",
+    "Constraints"
+  ],
+  "constraints": [
+    "natural skin texture"
+  ],
+  "common_failures": [
+    "muddy layers"
+  ],
+  "related_styles": [
+    "style-cinematic-realism"
+  ],
+  "related_techniques": [
+    "technique-reference-image",
+    "technique-color-grading",
+    "technique-camera-lens"
+  ],
+  "related_recipes": [
+    "recipe-character-consistency"
+  ],
+  "example_cases": [
+    "case-cinematic-portrait"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "portrait",
+    "double-exposure",
+    "editorial"
+  ]
+}

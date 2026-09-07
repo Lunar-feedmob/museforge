@@ -1,0 +1,62 @@
+{
+  "id": "case-saas-hero",
+  "title": "SaaS / AI 产品 Hero Visual",
+  "category": "product hero",
+  "use_case": "product marketing",
+  "user_intent": "A clean SaaS/AI product hero visual.",
+  "input_type": "text-to-image",
+  "reference_requirements": "none",
+  "source": "synthetic",
+  "model": "gpt-image-2",
+  "original_prompt": "A clean SaaS product hero visual. A laptop device centered with a minimal flat-vector illustration of an AI assistant interface floating around it. Premium SaaS style, brand blue accent on a neutral background. Generous negative space, flat vector, no photorealism. Clean sans-serif UI text on the device.",
+  "visual_intent": "A clean SaaS hero with device.",
+  "subject": "laptop device",
+  "environment": "neutral background",
+  "composition": "centered device + floating UI",
+  "lighting": "soft, even",
+  "camera": "front",
+  "lens": "n/a",
+  "perspective": "slight angle",
+  "style": "premium SaaS",
+  "color": "brand blue + neutral",
+  "materials": "flat vector",
+  "typography": "clean sans-serif UI",
+  "layout": "centered device",
+  "supporting_elements": [
+    "floating UI cards"
+  ],
+  "techniques": [
+    "whitespace",
+    "visual hierarchy",
+    "text rendering"
+  ],
+  "constraints": [
+    "flat vector",
+    "brand color"
+  ],
+  "negative_constraints": [
+    "no photorealism",
+    "no clutter"
+  ],
+  "tags": [
+    "saas",
+    "hero",
+    "device",
+    "flat"
+  ],
+  "pattern_ids": [
+    "pattern-minimal-saas-illustration",
+    "pattern-hero-device-composition"
+  ],
+  "style_ids": [
+    "style-premium-saas"
+  ],
+  "technique_ids": [
+    "technique-whitespace",
+    "technique-visual-hierarchy",
+    "technique-text-rendering"
+  ],
+  "recipe_ids": [
+    "recipe-saas-landing-hero"
+  ]
+}

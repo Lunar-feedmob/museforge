@@ -1,0 +1,13 @@
+{
+  "id": "awesome-gpt-image-2-api",
+  "name": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+  "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+  "kind": "github",
+  "license": "CC0-1.0",
+  "allowed_usage": null,
+  "redistribution_status": "allowed",
+  "attribution_requirements": "None (public domain).",
+  "description": "GPT Image 2 API + prompts, cases/data/scripts separation.",
+  "last_checked": null,
+  "notes": ""
+}

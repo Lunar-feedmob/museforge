@@ -1,0 +1,30 @@
+{
+  "id": "nano-banana",
+  "name": "Nano Banana",
+  "family": "gemini",
+  "provider": "Google",
+  "capabilities": [
+    "text-to-image",
+    "image editing",
+    "multi-image input"
+  ],
+  "strengths": [
+    "image editing",
+    "multi-image workflows"
+  ],
+  "limitations": [
+    "community-reported; no independent benchmark"
+  ],
+  "text_rendering": "good; quote exact text",
+  "consistency": "good for character consistency workflows",
+  "editing": "strong image-to-image editing",
+  "prompt_style_notes": "Natural-language editing works well.",
+  "source_type": "community-derived",
+  "source_references": [
+    "awesome-nano-banana-images"
+  ],
+  "tags": [
+    "google",
+    "editing"
+  ]
+}

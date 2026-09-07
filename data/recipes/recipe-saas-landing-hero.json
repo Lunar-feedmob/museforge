@@ -1,0 +1,81 @@
+{
+  "id": "recipe-saas-landing-hero",
+  "name": "SaaS Landing Hero",
+  "category": "product hero",
+  "goal": "A clean SaaS landing hero visual.",
+  "description": "The method for a SaaS landing hero.",
+  "required_inputs": [
+    "product name",
+    "brand color"
+  ],
+  "optional_inputs": [
+    "device",
+    "illustration",
+    "headline"
+  ],
+  "workflow": [
+    "product",
+    "device",
+    "illustration",
+    "space",
+    "color"
+  ],
+  "steps": [
+    "Identify the product and its core value.",
+    "Choose a device or hero composition.",
+    "Add minimal illustration.",
+    "Reserve negative space.",
+    "Apply the brand color."
+  ],
+  "decision_points": [
+    "device vs illustration",
+    "flat vs 3D"
+  ],
+  "recommended_patterns": [
+    "pattern-minimal-saas-illustration",
+    "pattern-hero-device-composition"
+  ],
+  "recommended_styles": [
+    "style-premium-saas",
+    "style-flat-vector"
+  ],
+  "recommended_techniques": [
+    "technique-whitespace",
+    "technique-visual-hierarchy"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Style",
+    "Color",
+    "Constraints"
+  ],
+  "composition_guidance": "Device hero, minimal illustration, generous space.",
+  "text_guidance": "Quote any UI text; keep it short.",
+  "constraints": [
+    "flat or clean 3D",
+    "brand color"
+  ],
+  "common_failures": [
+    "clutter",
+    "inconsistent brand color"
+  ],
+  "failure_recovery": [
+    "reduce elements",
+    "re-state brand color"
+  ],
+  "example_cases": [
+    "case-saas-hero"
+  ],
+  "source_repositories": [
+    "gpt-image2-skill",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "saas",
+    "hero",
+    "landing"
+  ]
+}

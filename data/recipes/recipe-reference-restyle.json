@@ -1,0 +1,76 @@
+{
+  "id": "recipe-reference-restyle",
+  "name": "Reference Image Restyle",
+  "category": "image editing",
+  "goal": "Restyle an input image while preserving its subject.",
+  "description": "The method for reference-image restyling.",
+  "required_inputs": [
+    "input image",
+    "target style"
+  ],
+  "optional_inputs": [
+    "composition change",
+    "environment"
+  ],
+  "workflow": [
+    "input",
+    "subject",
+    "style",
+    "composition",
+    "output"
+  ],
+  "steps": [
+    "Provide the input image.",
+    "Identify the subject to preserve.",
+    "Apply the new style.",
+    "Preserve or change the composition as needed.",
+    "Generate the restyled output."
+  ],
+  "decision_points": [
+    "preserve vs change composition"
+  ],
+  "recommended_patterns": [
+    "pattern-double-exposure-portrait"
+  ],
+  "recommended_styles": [
+    "style-cinematic-realism",
+    "style-flat-vector"
+  ],
+  "recommended_techniques": [
+    "technique-reference-image",
+    "technique-character-consistency"
+  ],
+  "prompt_structure": [
+    "Subject",
+    "Reference",
+    "Style",
+    "Composition",
+    "Constraints"
+  ],
+  "composition_guidance": "Preserve the subject's core composition.",
+  "text_guidance": "n/a",
+  "constraints": [
+    "preserve subject identity"
+  ],
+  "common_failures": [
+    "subject drift",
+    "style bleed"
+  ],
+  "failure_recovery": [
+    "re-state the subject",
+    "strengthen the style"
+  ],
+  "example_cases": [
+    "case-cinematic-portrait"
+  ],
+  "source_repositories": [
+    "awesome-nano-banana-images",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "editing",
+    "restyle",
+    "reference"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "case-fintech-card",
+  "title": "金融科技银行卡广告",
+  "category": "product advertisement",
+  "use_case": "fintech marketing",
+  "user_intent": "A premium fintech card advertisement.",
+  "input_type": "text-to-image",
+  "reference_requirements": "none",
+  "source": "synthetic",
+  "model": "nano-banana-pro",
+  "original_prompt": "A premium fintech card advertisement. A dark metal credit card floating on dark water with subtle ripples and reflections. Card reads \"NOVA CARD\" in clean sans-serif. Golden hour glow creates reflections. Luxury commercial style, shallow depth of field, soft bokeh background. Preserve card geometry and branding exactly. Controlled negative space.",
+  "visual_intent": "A premium floating card ad.",
+  "subject": "metal credit card",
+  "environment": "dark water",
+  "composition": "centered card + reflection",
+  "lighting": "golden hour glow",
+  "camera": "eye-level",
+  "lens": "shallow depth of field",
+  "perspective": "slight low angle",
+  "style": "luxury commercial",
+  "color": "dark + gold accents",
+  "materials": "metal, water",
+  "typography": "clean sans-serif on card",
+  "layout": "centered",
+  "supporting_elements": [
+    "ripples",
+    "reflections"
+  ],
+  "techniques": [
+    "product preservation",
+    "brand preservation",
+    "lighting control",
+    "text rendering"
+  ],
+  "constraints": [
+    "preserve card geometry",
+    "protect branding"
+  ],
+  "negative_constraints": [
+    "no clutter"
+  ],
+  "tags": [
+    "fintech",
+    "card",
+    "luxury",
+    "ad"
+  ],
+  "pattern_ids": [
+    "pattern-centered-luxury-product",
+    "pattern-breakout-product-hero"
+  ],
+  "style_ids": [
+    "style-luxury-commercial"
+  ],
+  "technique_ids": [
+    "technique-product-preservation",
+    "technique-brand-preservation",
+    "technique-lighting-control",
+    "technique-text-rendering"
+  ],
+  "recipe_ids": [
+    "recipe-fintech-card-ad",
+    "recipe-product-hero-ad"
+  ]
+}

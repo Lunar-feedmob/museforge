@@ -1,0 +1,76 @@
+{
+  "id": "pattern-magazine-infographic",
+  "name": "Magazine Infographic",
+  "aliases": [
+    "infographic",
+    "editorial infographic"
+  ],
+  "category": "infographic",
+  "description": "Editorial layout + data + typography + whitespace.",
+  "visual_goal": "Communicate data clearly and beautifully.",
+  "best_for": [
+    "data visualization",
+    "educational cards",
+    "reports"
+  ],
+  "not_good_for": [
+    "pure photography"
+  ],
+  "composition": "structured grid with data hierarchy",
+  "visual_hierarchy": "headline -> key data -> detail",
+  "subject_placement": "data blocks in a grid",
+  "foreground": "headline",
+  "midground": "charts/data",
+  "background": "clean paper",
+  "perspective": "flat, editorial",
+  "lighting_strategy": "even",
+  "color_strategy": "muted + accent for key data",
+  "typography_strategy": "clear hierarchy, readable labels",
+  "negative_space_strategy": "generous between blocks",
+  "supporting_elements": [
+    "icons",
+    "charts"
+  ],
+  "prompt_structure": [
+    "Format",
+    "Visual goal",
+    "Layout",
+    "Hierarchy",
+    "Style",
+    "Color",
+    "Typography",
+    "Constraints"
+  ],
+  "constraints": [
+    "text readability first",
+    "accurate data"
+  ],
+  "common_failures": [
+    "text garble",
+    "data mislabel"
+  ],
+  "related_styles": [
+    "style-modern-chinese-editorial",
+    "style-editorial-minimalism"
+  ],
+  "related_techniques": [
+    "technique-text-rendering",
+    "technique-visual-hierarchy"
+  ],
+  "related_recipes": [
+    "recipe-infographic"
+  ],
+  "example_cases": [
+    "case-chinese-infographic"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2",
+    "ai-image-prompt-cookbook"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "infographic",
+    "data",
+    "editorial"
+  ]
+}

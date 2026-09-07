@@ -1,0 +1,41 @@
+{
+  "id": "technique-multi-panel-grid",
+  "name": "multi-panel grid",
+  "category": "Layout",
+  "description": "Use a strict grid for multi-panel layouts.",
+  "problem_it_solves": "Models misalign panels.",
+  "pattern": "strict [R]x[C] grid with [N] perfectly aligned panels",
+  "implementation_guidance": "State rows, columns, and alignment explicitly.",
+  "when_to_use": [
+    "comics",
+    "campaign grids",
+    "comparisons"
+  ],
+  "when_not_to_use": [
+    "single image"
+  ],
+  "good_examples": [
+    "strict 2-column by 3-row grid with six perfectly aligned panels"
+  ],
+  "bad_examples": [
+    "a grid of images"
+  ],
+  "related_patterns": [
+    "pattern-multi-panel-comic",
+    "pattern-split-screen-comparison"
+  ],
+  "related_recipes": [
+    "recipe-multi-panel-comic"
+  ],
+  "related_styles": [
+    "style-modern-chinese-editorial"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "grid",
+    "layout"
+  ]
+}

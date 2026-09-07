@@ -1,0 +1,13 @@
+{
+  "id": "awesome-nano-banana-images",
+  "name": "PicoTrex/Awesome-Nano-Banana-images",
+  "url": "https://github.com/PicoTrex/Awesome-Nano-Banana-images",
+  "kind": "github",
+  "license": "CC BY 4.0",
+  "allowed_usage": null,
+  "redistribution_status": "allowed",
+  "attribution_requirements": "Attribute author + source.",
+  "description": "Nano Banana image-editing workflows (input -> output).",
+  "last_checked": null,
+  "notes": ""
+}

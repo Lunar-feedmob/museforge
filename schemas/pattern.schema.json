@@ -1,0 +1,187 @@
+{
+  "description": "A reusable visual structure that works across products, brands, and subjects.",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "aliases": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Aliases",
+      "type": "array"
+    },
+    "category": {
+      "default": "",
+      "title": "Category",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "visual_goal": {
+      "default": "",
+      "title": "Visual Goal",
+      "type": "string"
+    },
+    "best_for": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Best For",
+      "type": "array"
+    },
+    "not_good_for": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Not Good For",
+      "type": "array"
+    },
+    "composition": {
+      "default": "",
+      "title": "Composition",
+      "type": "string"
+    },
+    "visual_hierarchy": {
+      "default": "",
+      "title": "Visual Hierarchy",
+      "type": "string"
+    },
+    "subject_placement": {
+      "default": "",
+      "title": "Subject Placement",
+      "type": "string"
+    },
+    "foreground": {
+      "default": "",
+      "title": "Foreground",
+      "type": "string"
+    },
+    "midground": {
+      "default": "",
+      "title": "Midground",
+      "type": "string"
+    },
+    "background": {
+      "default": "",
+      "title": "Background",
+      "type": "string"
+    },
+    "perspective": {
+      "default": "",
+      "title": "Perspective",
+      "type": "string"
+    },
+    "lighting_strategy": {
+      "default": "",
+      "title": "Lighting Strategy",
+      "type": "string"
+    },
+    "color_strategy": {
+      "default": "",
+      "title": "Color Strategy",
+      "type": "string"
+    },
+    "typography_strategy": {
+      "default": "",
+      "title": "Typography Strategy",
+      "type": "string"
+    },
+    "negative_space_strategy": {
+      "default": "",
+      "title": "Negative Space Strategy",
+      "type": "string"
+    },
+    "supporting_elements": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Elements",
+      "type": "array"
+    },
+    "prompt_structure": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Prompt Structure",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "common_failures": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Common Failures",
+      "type": "array"
+    },
+    "related_styles": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Styles",
+      "type": "array"
+    },
+    "related_techniques": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Techniques",
+      "type": "array"
+    },
+    "related_recipes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Recipes",
+      "type": "array"
+    },
+    "example_cases": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Example Cases",
+      "type": "array"
+    },
+    "source_repositories": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Repositories",
+      "type": "array"
+    },
+    "confidence": {
+      "default": 0.5,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "title": "VisualPattern",
+  "type": "object"
+}

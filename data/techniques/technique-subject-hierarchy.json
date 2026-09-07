@@ -1,0 +1,41 @@
+{
+  "id": "technique-subject-hierarchy",
+  "name": "subject hierarchy",
+  "category": "Composition",
+  "description": "Compose as a scene with a clear subject hierarchy, not isolated objects.",
+  "problem_it_solves": "Models produce flat, disconnected compositions.",
+  "pattern": "compose it as a SCENE; subject hierarchy: [primary] -> [secondary]",
+  "implementation_guidance": "Order subjects by importance and describe their relationship.",
+  "when_to_use": [
+    "product scenes",
+    "editorial",
+    "storytelling"
+  ],
+  "when_not_to_use": [
+    "single isolated object"
+  ],
+  "good_examples": [
+    "compose it as a SCENE, not a single isolated object"
+  ],
+  "bad_examples": [
+    "a product on a table"
+  ],
+  "related_patterns": [
+    "pattern-breakout-product-hero",
+    "pattern-layered-depth-product-ad"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-luxury-commercial"
+  ],
+  "source_repositories": [
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "composition",
+    "hierarchy"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "technique-negative-constraints",
+  "name": "negative constraints",
+  "category": "Negative Constraints",
+  "description": "Explicitly forbid unwanted elements.",
+  "problem_it_solves": "Models add unwanted text, props, or clutter.",
+  "pattern": "do not include [X]; no [Y]",
+  "implementation_guidance": "List what to exclude; keep the list short and specific.",
+  "when_to_use": [
+    "clean product shots",
+    "text-free storytelling"
+  ],
+  "when_not_to_use": [
+    "when exclusions are obvious"
+  ],
+  "good_examples": [
+    "do not include any words or text on the images"
+  ],
+  "bad_examples": [
+    "make it clean"
+  ],
+  "related_patterns": [
+    "pattern-multi-panel-comic",
+    "pattern-breakout-product-hero"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-editorial-minimalism"
+  ],
+  "source_repositories": [
+    "awesome-nano-banana-images",
+    "freestylefly-awesome-gpt-image-2"
+  ],
+  "confidence": 0.85,
+  "tags": [
+    "constraints",
+    "negative"
+  ]
+}

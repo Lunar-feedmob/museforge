@@ -1,0 +1,69 @@
+{
+  "id": "pattern-hero-device-composition",
+  "name": "Hero Device Composition",
+  "aliases": [
+    "device hero",
+    "app hero"
+  ],
+  "category": "product hero",
+  "description": "Device + product + environment, layered depth.",
+  "visual_goal": "Show the product in a real context.",
+  "best_for": [
+    "app screenshots",
+    "device marketing"
+  ],
+  "not_good_for": [
+    "text-heavy posters"
+  ],
+  "composition": "device + environment + layered depth",
+  "visual_hierarchy": "device first, environment second",
+  "subject_placement": "device centered or angled",
+  "foreground": "device",
+  "midground": "supporting UI",
+  "background": "environment",
+  "perspective": "three-quarter angle",
+  "lighting_strategy": "soft studio",
+  "color_strategy": "brand + neutral",
+  "typography_strategy": "UI text on device",
+  "negative_space_strategy": "controlled",
+  "supporting_elements": [
+    "floating UI elements"
+  ],
+  "prompt_structure": [
+    "Product",
+    "Scene",
+    "Composition",
+    "Style",
+    "Constraints"
+  ],
+  "constraints": [
+    "preserve UI text"
+  ],
+  "common_failures": [
+    "UI text garble"
+  ],
+  "related_styles": [
+    "style-premium-saas",
+    "style-3d-commercial"
+  ],
+  "related_techniques": [
+    "technique-text-rendering",
+    "technique-product-preservation"
+  ],
+  "related_recipes": [
+    "recipe-saas-landing-hero",
+    "recipe-app-screenshot-ad"
+  ],
+  "example_cases": [
+    "case-saas-hero"
+  ],
+  "source_repositories": [
+    "gpt-image2-skill"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "device",
+    "app",
+    "hero"
+  ]
+}

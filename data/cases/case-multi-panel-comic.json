@@ -1,0 +1,60 @@
+{
+  "id": "case-multi-panel-comic",
+  "title": "多格漫画",
+  "category": "comic",
+  "use_case": "storytelling",
+  "user_intent": "A multi-panel comic.",
+  "input_type": "text-to-image",
+  "reference_requirements": "character reference optional",
+  "source": "synthetic",
+  "model": "nano-banana-pro",
+  "original_prompt": "A multi-panel comic. A strict 2-column by 3-row grid with six perfectly aligned panels. Two consistent characters — a detective and a robot — in a black and white film noir story. Character consistency across all panels. No text or words on the images; tell the story purely through imagery. Sequential art, consistent palette.",
+  "visual_intent": "A six-panel noir comic.",
+  "subject": "detective and robot",
+  "environment": "film noir city",
+  "composition": "2x3 grid",
+  "lighting": "high contrast noir",
+  "camera": "varies per panel",
+  "lens": "n/a",
+  "perspective": "varies",
+  "style": "cinematic realism",
+  "color": "black and white",
+  "materials": "ink",
+  "typography": "none",
+  "layout": "six panels",
+  "supporting_elements": [
+    "none"
+  ],
+  "techniques": [
+    "character consistency",
+    "multi-panel grid",
+    "negative constraints"
+  ],
+  "constraints": [
+    "character consistency",
+    "no text"
+  ],
+  "negative_constraints": [
+    "no words or text"
+  ],
+  "tags": [
+    "comic",
+    "storyboard",
+    "noir",
+    "sequential"
+  ],
+  "pattern_ids": [
+    "pattern-multi-panel-comic"
+  ],
+  "style_ids": [
+    "style-cinematic-realism"
+  ],
+  "technique_ids": [
+    "technique-character-consistency",
+    "technique-multi-panel-grid",
+    "technique-negative-constraints"
+  ],
+  "recipe_ids": [
+    "recipe-multi-panel-comic"
+  ]
+}

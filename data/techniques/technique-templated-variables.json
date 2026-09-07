@@ -1,0 +1,39 @@
+{
+  "id": "technique-templated-variables",
+  "name": "templated variables",
+  "category": "Prompt Structure",
+  "description": "Use [VARIABLE] placeholders to make a prompt reusable.",
+  "problem_it_solves": "One-off prompts can't be reused across products/brands.",
+  "pattern": "[BRAND] [PRODUCT NAME] - [shape], [label], [color]",
+  "implementation_guidance": "Declare variables and fill them per use.",
+  "when_to_use": [
+    "product templates",
+    "campaign systems"
+  ],
+  "when_not_to_use": [
+    "one-off art"
+  ],
+  "good_examples": [
+    "Product: [BRAND] [PRODUCT NAME] - [bottle shape]"
+  ],
+  "bad_examples": [
+    "a specific product"
+  ],
+  "related_patterns": [
+    "pattern-centered-luxury-product"
+  ],
+  "related_recipes": [
+    "recipe-product-hero-ad"
+  ],
+  "related_styles": [
+    "style-luxury-commercial"
+  ],
+  "source_repositories": [
+    "awesome-nanobanana-pro"
+  ],
+  "confidence": 0.8,
+  "tags": [
+    "template",
+    "variables"
+  ]
+}
