@@ -289,6 +289,33 @@ MuseForge 的知识模型建立在对 17+ 个高质量图像生成仓库的系�
 
 ---
 
+## MCP server（HTTP + Google OAuth）
+
+MuseForge 提供两种 MCP server 模式：
+
+```bash
+# 本地、无认证（stdio）—— 用于本机的 Claude Code、Cursor 等。
+pip install -e ".[mcp]"
+museforge-mcp                  # 或：  museforge mcp-stdio
+
+# 共享 / 远程（HTTP + Google OAuth）—— 用于把 server 分发给团队或远程 MCP 客户端。
+pip install -e ".[mcp-http]"
+export GOOGLE_CLIENT_ID=...     # 从 Google Cloud Console > OAuth credentials 获取
+export GOOGLE_CLIENT_SECRET=...
+export MUSEFORGE_PUBLIC_BASE_URL=https://museforge.example.com
+museforge-mcp-http --host 0.0.0.0 --port 8000   # 或：  museforge mcp-http
+```
+
+HTTP server 暴露 **11 个 MCP 工具**（`create_image_prompt`、`recommend_image_direction`、
+`analyze_image_request`、`improve_image_prompt`、`optimize_image_prompt`、
+`search_image_cases`、`search_image_prompts`、`search_image_recipes`、
+`search_visual_patterns`、`search_image_styles`、`search_prompt_techniques`），并以
+**Google 作为上游 IdP**、使用 **MCP OAuth 授权码流程**。只有配置白名单
+（`MUSEFORGE_ALLOWED_EMAIL_DOMAINS`，**默认 `feedmob.com`**）内的 Google 账户可以认证。
+
+完整架构、Google Cloud Console 配置步骤、端点表和生产注意事项（TLS、持久化 token store）
+见 [`docs/mcp-roadmap.md`](docs/mcp-roadmap.md)。
+
 ## 状态
 
 **V0** —— 知识获取、去重、分析、抽取、检索、Creative Direction、Prompt 编排。尚未接入图像生成 API。

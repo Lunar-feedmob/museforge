@@ -321,6 +321,35 @@ three seed prompts are annotated exemplars from MIT / CC BY 4.0 sources with ful
 
 ---
 
+## MCP server (HTTP + Google OAuth)
+
+MuseForge ships two MCP server modes:
+
+```bash
+# Local, no auth (stdio) — for Claude Code, Cursor, etc. on your own machine.
+pip install -e ".[mcp]"
+museforge-mcp                  # or:  museforge mcp-stdio
+
+# Shared / remote (HTTP + Google OAuth) — for distributing the server
+# to your team or to remote MCP clients.
+pip install -e ".[mcp-http]"
+export GOOGLE_CLIENT_ID=...     # from Google Cloud Console > OAuth credentials
+export GOOGLE_CLIENT_SECRET=...
+export MUSEFORGE_PUBLIC_BASE_URL=https://museforge.example.com
+museforge-mcp-http --host 0.0.0.0 --port 8000   # or:  museforge mcp-http
+```
+
+The HTTP server exposes the **11 MCP tools** (`create_image_prompt`,
+`recommend_image_direction`, `analyze_image_request`, `improve_image_prompt`,
+`optimize_image_prompt`, `search_image_cases`, `search_image_prompts`,
+`search_image_recipes`, `search_visual_patterns`, `search_image_styles`,
+`search_prompt_techniques`) and uses Google as the upstream identity provider with the
+**MCP OAuth authorization-code flow**. Only Google accounts in the configured allowlist
+(`MUSEFORGE_ALLOWED_EMAIL_DOMAINS`, **default `feedmob.com`**) can authenticate.
+
+See [`docs/mcp-roadmap.md`](docs/mcp-roadmap.md) for the full architecture, the Google
+Cloud Console setup, the endpoint table, and production notes (TLS, persistent token store).
+
 ## Status
 
 **V0** — knowledge acquisition, deduplication, analysis, extraction, retrieval, creative

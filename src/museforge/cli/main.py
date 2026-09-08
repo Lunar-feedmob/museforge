@@ -108,6 +108,28 @@ def sources() -> None:
 
 
 @app.command()
+def mcp_http() -> None:
+    """Run the MCP server over HTTP with Google OAuth + Bearer auth."""
+    console.print(
+        "[bold]Starting MuseForge MCP server (HTTP + Google OAuth)...[/bold]\n"
+        "Required env: GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET,\n"
+        "              MUSEFORGE_PUBLIC_BASE_URL, MUSEFORGE_GOOGLE_REDIRECT_URI\n"
+        "Optional: MUSEFORGE_ALLOWED_EMAIL_DOMAINS (default feedmob.com)"
+    )
+    from museforge.mcp_http import serve
+
+    serve()
+
+
+@app.command()
+def mcp_stdio() -> None:
+    """Run the MCP server over stdio (no auth, local use)."""
+    from museforge.mcp_server import main as _mcp_stdio_main  # type: ignore[import-untyped]
+
+    _mcp_stdio_main()
+
+
+@app.command()
 def stats() -> None:
     """Show knowledge-base statistics."""
     store = _store()
