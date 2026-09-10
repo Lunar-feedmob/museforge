@@ -1,0 +1,24 @@
+# Cloudflare Tunnel configuration for MuseForge MCP.
+#
+# Setup (run once on the VPS):
+#   1. cloudflared login                     # opens browser, authorizes the tunnel
+#   2. cloudflared tunnel create museforge   # creates the tunnel, prints UUID + path to credentials.json
+#   3. cloudflared tunnel route dns <UUID> museforge.yourdomain.com
+#   4. Copy credentials.json to /etc/cloudflared/<UUID>.json
+#   5. cp deploy/cloudflared-config.yml /etc/cloudflared/config.yml
+#   6. systemctl enable --now cloudflared
+#
+# Replace the credential path + hostname below with your real values.
+
+tunnel: REPLACE_WITH_TUNNEL_UUID
+credentials-file: /etc/cloudflared/REPLACE_WITH_TUNNEL_UUID.json
+
+ingress:
+  # Primary MCP service (Bearer-protected at /mcp; OAuth metadata at /.well-known/*).
+  - hostname: museforge.yourdomain.com
+    service: http://127.0.0.1:8000
+    originRequest:
+      # Pass the real Host / IP through so the Bearer wrapper and OAuth metadata see it.
+      noTLSVerify: true
+  # Catch-all 404 (required by cloudflared).
+  - service: http_status:404

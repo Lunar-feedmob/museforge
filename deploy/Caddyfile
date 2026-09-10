@@ -1,0 +1,23 @@
+# Caddy reverse proxy for MuseForge MCP.
+# Replace museforge.example.com with your real domain before deploying.
+
+museforge.example.com {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:8000 {
+        # Preserve the full /mcp path (Mount would strip it; the in-app middleware
+        # dispatcher in src/museforge/mcp_http.py relies on path preservation).
+        header_up Host {host}
+        header_up X-Real-IP {remote}
+        header_up X-Forwarded-For {remote}
+        header_up X-Forwarded-Proto {scheme}
+    }
+
+    # Optional: rate-limit the OAuth discovery endpoints to reduce scraping surface.
+    @oauth_meta path /.well-known/oauth-*
+    rate_limit @oauth_meta 30r/m
+
+    # Health check (no auth, for uptime monitors).
+    handle /health {
+        respond "ok\n" 200
+    }
+}

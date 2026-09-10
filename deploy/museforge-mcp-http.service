@@ -1,0 +1,32 @@
+[Unit]
+Description=MuseForge MCP server (HTTP + Google OAuth)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=museforge
+Group=museforge
+WorkingDirectory=/opt/museforge
+EnvironmentFile=/opt/museforge/.env
+ExecStart=/opt/museforge/.venv/bin/museforge-mcp-http --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=museforge-mcp
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/museforge/data
+PrivateDevices=true
+
+# Resource limits (adjust to your VPS)
+LimitNOFILE=65535
+MemoryMax=512M
+
+[Install]
+WantedBy=multi-user.target

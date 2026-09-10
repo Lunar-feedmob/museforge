@@ -1,0 +1,24 @@
+[Unit]
+Description=Cloudflare Tunnel for MuseForge MCP
+After=network-online.target
+Wants=network-online.target museforge-mcp-http.service
+
+[Service]
+Type=notify
+ExecStart=/usr/local/bin/cloudflared --no-autoupdate tunnel --config /etc/cloudflared/config.yml run
+Restart=on-failure
+RestartSec=5
+User=nobody
+Group=nogroup
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cloudflared-museforge
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
