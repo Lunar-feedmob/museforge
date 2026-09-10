@@ -84,7 +84,7 @@ def test_exchange_code_calls_google(monkeypatch: pytest.MonkeyPatch) -> None:
         def json(self):
             return {"id_token": "fake.jwt.token", "access_token": "x"}
 
-    def _post(url, data, timeout):  # noqa: ARG001
+    def _post(url, data, **kwargs):  # noqa: ARG001
         assert "oauth2.googleapis.com" in url
         return _Resp()
 
@@ -435,12 +435,20 @@ def test_bearer_auth_rejects_bad_token() -> None:
 
 
 def test_full_http_app_builds() -> None:
-    """Smoke test: the full Starlette app (OAuth routes + /mcp mount) builds cleanly."""
+    """Smoke test: the full ASGI app (OAuth routes + Bearer-protected /mcp) builds and routes correctly."""
+    import os
+    os.environ.setdefault("GOOGLE_CLIENT_ID", "cid")
+    os.environ.setdefault("GOOGLE_CLIENT_SECRET", "csec")
+    from starlette.testclient import TestClient
+
     from museforge.mcp_http import _build_app
 
     app = _build_app()
-    # 6 OAuth routes + 1 Mount for /mcp.
-    assert len(app.router.routes) >= 7
-    # The MCP mount is present.
-    paths = [getattr(r, "path", "") for r in app.router.routes]
-    assert any(p == "/mcp" for p in paths)
+    client = TestClient(app)
+    # OAuth metadata reachable (proves the OAuth routes are wired).
+    r = client.get("/.well-known/oauth-authorization-server")
+    assert r.status_code == 200
+    # /mcp reachable and protected by Bearer (proves the dispatch + auth work).
+    r = client.get("/mcp")
+    assert r.status_code == 401
+    assert "www-authenticate" in {k.lower() for k in r.headers}

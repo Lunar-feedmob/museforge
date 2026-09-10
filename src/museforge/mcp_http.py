@@ -47,18 +47,17 @@ from museforge.services.assistant import MuseForgeAssistant
 
 
 # Lazy MCP imports — the core package doesn't require the MCP SDK.
-def _import_mcp() -> tuple[Any, Any, Any, Any]:
+def _import_mcp() -> tuple[Any, Any, Any]:
     try:
         import uvicorn
         from mcp.server.fastmcp import FastMCP
         from starlette.applications import Starlette
-        from starlette.routing import Mount
     except ImportError as exc:  # pragma: no cover
         raise ImportError(
             "The HTTP MCP server requires optional deps. Install with: "
             "pip install museforge[mcp-http]"
         ) from exc
-    return FastMCP, Starlette, Mount, uvicorn
+    return FastMCP, Starlette, uvicorn
 
 
 def _store() -> KnowledgeStore:
@@ -181,7 +180,15 @@ def _build_mcp_server() -> Any:
 
 
 def _build_app() -> Any:
-    """Build the Starlette ASGI app: OAuth routes + Bearer-protected MCP transport."""
+    """Build the ASGI app: OAuth routes + Bearer-protected MCP transport at /mcp.
+
+    Architecture:
+      - The Starlette app handles OAuth routes and its own lifespan.
+      - A middleware dispatches /mcp requests to the FastMCP transport ASGI app,
+        preserving the full "/mcp" path (Mount would strip it and 404 the transport).
+      - Lifespans of the OAuth app and the transport are composed so the transport's
+        session manager initializes alongside the OAuth routes.
+    """
     from museforge.auth import (
         MCP_MOUNT_PATH,
         OAUTH_ROUTES,
@@ -189,20 +196,53 @@ def _build_app() -> Any:
         bearer_auth_asgi,
     )
 
-    FastMCP, Starlette, Mount, _uvicorn = _import_mcp()
+    _FastMCP, Starlette, _uvicorn = _import_mcp()
     mcp = _build_mcp_server()
-    mcp_asgi = mcp.streamable_http_app()  # the Streamable HTTP transport (ASGI app)
 
-    auth_store = InMemoryAuthStore()
-    app = Starlette(routes=list(OAUTH_ROUTES))
-    # State shared across requests.
-    app.state.auth_store = auth_store
-    app.state.pending = {}
-    # Mount the MCP transport under /mcp, wrapped with Bearer auth.
-    app.router.routes.append(
-        Mount(MCP_MOUNT_PATH, app=bearer_auth_asgi(mcp_asgi))
-    )
-    return app
+    # The transport: a Starlette sub-app whose internal Route is "/mcp". We extract
+    # the underlying ASGI app (the StreamableHTTPASGIApp endpoint) so we can call it
+    # from a middleware with the path preserved.
+    transport_starlette = mcp.streamable_http_app()
+    transport_asgi = transport_starlette.router.routes[0].endpoint
+
+    # The OAuth app (routes only — we control lifespan separately).
+    oauth_app = Starlette(routes=list(OAUTH_ROUTES))
+    oauth_app.state.auth_store = InMemoryAuthStore()
+    oauth_app.state.pending = {}
+
+    # Compose lifespans so the transport's session manager initializes.
+    oauth_lifespan = oauth_app.router.lifespan_context
+    transport_lifespan = transport_starlette.router.lifespan_context
+    if oauth_lifespan is not None and transport_lifespan is not None:
+        from contextlib import asynccontextmanager
+
+        @asynccontextmanager
+        async def combined_lifespan(scope: Any) -> Any:
+            async with oauth_lifespan(scope), transport_lifespan(scope):
+                yield
+
+        oauth_app.router.lifespan_context = combined_lifespan
+
+    # Middleware that dispatches /mcp to the bearer-protected transport, preserving the path.
+    class _McpDispatch:
+        def __init__(self, app: Any, transport: Any) -> None:
+            self.app = app
+            self.transport = transport
+            self._protected = bearer_auth_asgi(transport)
+
+        async def __call__(self, scope: Any, receive: Any, send: Any) -> None:
+            # Starlette's Request reads scope["app"]; the Bearer wrapper reads
+            # scope["app"].state.auth_store. Set it on every http/lifespan request
+            # before delegating so the downstream app sees it.
+            scope["app"] = self.app
+            if scope["type"] == "http":
+                path = scope.get("path", "")
+                if path == MCP_MOUNT_PATH or path.startswith(MCP_MOUNT_PATH + "/"):
+                    await self._protected(scope, receive, send)
+                    return
+            await self.app(scope, receive, send)
+
+    return _McpDispatch(oauth_app, transport_asgi)
 
 
 def _parse_args() -> argparse.Namespace:
@@ -221,7 +261,7 @@ def _parse_args() -> argparse.Namespace:
 def serve(host: str | None = None, port: int | None = None) -> None:
     """Run the HTTP MCP server. ``host``/``port`` default to env (MUSEFORGE_HOST/MUSEFORGE_PORT
     or 127.0.0.1:8000). Used by both the console script and the CLI subcommand."""
-    FastMCP, Starlette, Mount, uvicorn = _import_mcp()
+    FastMCP, Starlette, uvicorn = _import_mcp()
     app = _build_app()
     uvicorn.run(
         app,
