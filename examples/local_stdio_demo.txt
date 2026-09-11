@@ -1,0 +1,131 @@
+[09/11/26 18:36:38] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+(spawning: C:\Users\24845\AppData\Local\Programs\Python\Python313\python.exe -m museforge.mcp_server)
+
+======================================================================
+1) initialize
+======================================================================
+   server:   museforge v1.30.0
+   protocol: 2025-11-25
+   caps:     ['experimental', 'prompts', 'resources', 'tools']
+
+======================================================================
+2) tools/list  (11 tools)
+======================================================================
+   [ 1] create_image_prompt
+        Turn an image idea into a structured Creative Direction + Super Prompt.
+   [ 2] recommend_image_direction
+        Design a Creative Direction (concept, composition, lighting, color, typography)
+   [ 3] analyze_image_request
+        Analyze a request into a structured Intent (use case, platform, aspect ratio, …).
+   [ 4] improve_image_prompt
+        Improve an existing prompt: strip low-info adjectives + append feedback.
+   [ 5] optimize_image_prompt
+        Produce a model-specific variant of a prompt (carries an optimization_basis label).
+   [ 6] search_image_cases
+        Search the Case knowledge base.
+   [ 7] search_image_prompts
+        Search the Prompt knowledge base (attributed, redistributable prompts).
+   [ 8] search_image_recipes
+        Search the Recipe knowledge base (methods for image tasks).
+   [ 9] search_visual_patterns
+        Search the Visual Pattern knowledge base (reusable visual structures).
+   [10] search_image_styles
+        Search the Style knowledge base (reusable visual systems).
+   [11] search_prompt_techniques
+        Search the Technique knowledge base (prompt-engineering levers).
+
+======================================================================
+3) tools/call analyze_image_request
+   request: "Create a premium fintech card advertisement"
+======================================================================
+{
+  "use_case": "fintech marketing",
+  "category": "product advertisement",
+  "platform": "",
+  "aspect_ratio": "",
+  "priority": "",
+  "style": "luxury commercial",
+  "visual_density": "medium",
+  "likely_pattern": "",
+  "keywords": [
+    "create",
+    "a",
+    "premium",
+    "fintech",
+    "card",
+    "advertisement"
+  ],
+  "language": "en",
+  "raw_request": "Create a premium fintech card advertisement"
+}
+
+======================================================================
+4) tools/call create_image_prompt (full pipeline, no model)
+   request: "帮我做一张小红书图文，主题是 3 个 AI 习惯，3:4 极简"
+======================================================================
+{
+  "intent": "use_case='social media marketing' category='social media poster' platform='Xiaohongshu' aspect_ratio='3:4' priority='text readability' style='editorial minimalism' visual_density='low' likely_pattern='' keywords=['帮我做一张小红书图文', '主题是', '3', '个让效率翻倍的', 'ai', '习惯', '3', '4', '极简', '专业'] language='zh' raw_request='帮我做一张小红书图文，主题是 3 个让效率翻倍的 AI 习惯，3:4，极简，专业'",
+  "creative_direction": "concept='Communicate a message clearly and elegantly.' goal='A platform-aware Xiaohongshu cover that prioritizes text readability.' recommended_recipe='recipe-xiaohongshu-info-card' recommended_pattern='pattern-editorial-text-first-poster' recommended_style='style-editorial-minimalism' visual_hierarchy='headline -> supporting text -> illustration' composition='text-first with a single focal point' subject_strategy='headline dominant, illustration supporting' environment='clean or subtle texture' perspective='flat, editorial' lighting='even, soft' color_palette='muted, 1-2 accent colors' typography=
+
+======================================================================
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Super Image Prompt Project\scripts\demo_stdio_mcp.py", line 130, in <module>
+  |     anyio.run(main)
+  |     ~~~~~~~~~^^^^^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\anyio\_core\_eventloop.py", line 83, in run
+  |     return async_backend.run(func, args, {}, backend_options)
+  |            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\anyio\_backends\_asyncio.py", line 2548, in run
+  |     return runner.run(wrapper())
+  |            ~~~~~~~~~~^^^^^^^^^^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+  |     return future.result()
+  |            ~~~~~~~~~~~~~^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\anyio\_backends\_asyncio.py", line 2531, in wrapper
+  |     return await func(*args)
+  |            ^^^^^^^^^^^^^^^^^
+  |   File "D:\Super Image Prompt Project\scripts\demo_stdio_mcp.py", line 36, in main
+  |     async with stdio_client(params) as (read, write):
+  |                ~~~~~~~~~~~~^^^^^^^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 235, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\mcp\client\stdio\__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\anyio\_backends\_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "D:\Super Image Prompt Project\scripts\demo_stdio_mcp.py", line 37, in main
+    |     async with ClientSession(read, write) as session:
+    |                ~~~~~~~~~~~~~^^^^^^^^^^^^^
+    |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\mcp\shared\session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\24845\AppData\Local\Programs\Python\Python313\Lib\site-packages\anyio\_backends\_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    |         "unhandled errors in a TaskGroup", self._exceptions
+    |     ) from None
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "D:\Super Image Prompt Project\scripts\demo_stdio_mcp.py", line 126, in main
+      |     print("\u2705 done")
+      |     ~~~~~^^^^^^^^^^^
+      | UnicodeEncodeError: 'gbk' codec can't encode character '\u2705' in position 0: illegal multibyte sequence
+      +------------------------------------
