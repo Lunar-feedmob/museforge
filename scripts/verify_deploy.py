@@ -111,7 +111,7 @@ def main(base_url: str) -> int:
         detail = f"status={r.status_code}"
         results.append(_check("/mcp rejects invalid Bearer", ok, detail))
 
-    passed = sum(results)
+    passed = sum(1 for r in results if r)
     total = len(results)
     print()
     print(f"Summary: {passed}/{total} checks passed.")
