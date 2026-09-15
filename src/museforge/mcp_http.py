@@ -47,17 +47,18 @@ from museforge.services.assistant import MuseForgeAssistant
 
 
 # Lazy MCP imports — the core package doesn't require the MCP SDK.
-def _import_mcp() -> tuple[Any, Any, Any]:
+def _import_mcp() -> tuple[Any, Any, Any, Any]:
     try:
         import uvicorn
         from mcp.server.fastmcp import FastMCP
+        from mcp.server.transport_security import TransportSecuritySettings
         from starlette.applications import Starlette
     except ImportError as exc:  # pragma: no cover
         raise ImportError(
             "The HTTP MCP server requires optional deps. Install with: "
             "pip install museforge[mcp-http]"
         ) from exc
-    return FastMCP, Starlette, uvicorn
+    return FastMCP, Starlette, uvicorn, TransportSecuritySettings
 
 
 def _store() -> KnowledgeStore:
@@ -96,8 +97,20 @@ def _search(retriever: Any, query: str, top_k: int) -> list[dict[str, Any]]:
 
 def _build_mcp_server() -> Any:
     """Build the FastMCP server with all 11 tools registered."""
-    FastMCP, *_ = _import_mcp()
-    mcp = FastMCP("museforge")
+    FastMCP, _Starlette, _uvicorn, TransportSecuritySettings = _import_mcp()
+    # Disable FastMCP's DNS-rebinding transport-security middleware. By default it
+    # restricts requests to host in {"127.0.0.1", "localhost", "::1"}, which breaks
+    # any non-localhost deployment (Vercel, Fly.io, a LAN box, …). The MCP OAuth
+    # wrapper handles its own Bearer-token gating; transport-security at the MCP
+    # transport layer is redundant for a serverless deploy behind HTTPS.
+    mcp = FastMCP(
+        "museforge",
+        transport_security=TransportSecuritySettings(
+            enable_dns_rebinding_protection=False,
+            allowed_hosts=[],
+            allowed_origins=[],
+        ),
+    )
 
     @mcp.tool()  # type: ignore[untyped-decorator]
     def create_image_prompt(
@@ -196,7 +209,7 @@ def _build_app() -> Any:
         bearer_auth_asgi,
     )
 
-    _FastMCP, Starlette, _uvicorn = _import_mcp()
+    _FastMCP, Starlette, _uvicorn, _TransportSecuritySettings = _import_mcp()
     mcp = _build_mcp_server()
 
     # The transport: a Starlette sub-app whose internal Route is "/mcp". We extract
@@ -262,7 +275,7 @@ def _parse_args() -> argparse.Namespace:
 def serve(host: str | None = None, port: int | None = None) -> None:
     """Run the HTTP MCP server. ``host``/``port`` default to env (MUSEFORGE_HOST/MUSEFORGE_PORT
     or 127.0.0.1:8000). Used by both the console script and the CLI subcommand."""
-    FastMCP, Starlette, uvicorn = _import_mcp()
+    FastMCP, Starlette, uvicorn, _TransportSecuritySettings = _import_mcp()
     app = _build_app()
     uvicorn.run(
         app,
