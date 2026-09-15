@@ -1,0 +1,15 @@
+# Vercel Python runtime dependencies.
+# Vercel reads this file (when present) instead of pyproject.toml for the build.
+# This list mirrors what `pip install .[mcp-http]` would install.
+# The local museforge package itself is installed by Vercel's pyproject.toml
+# detection (see https://vercel.com/docs/functions/runtimes/python).
+
+pydantic>=2.7
+typer>=0.12
+rich>=13.7
+mcp>=1.0,<2.0
+starlette>=0.36
+uvicorn>=0.30
+httpx>=0.27
+pyjwt[crypto]>=2.8
+upstash-redis>=1.1,<2

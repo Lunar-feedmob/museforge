@@ -120,13 +120,8 @@ def _build_app_for_test(monkeypatch: pytest.MonkeyPatch):
     # Provide dummy Google config so auth helpers don't error if any code path hits them.
     monkeypatch.setenv("GOOGLE_CLIENT_ID", "cid")
     monkeypatch.setenv("GOOGLE_CLIENT_SECRET", "csec")
-    # PUBLIC_BASE_URL is captured at module import — patch the module constant directly.
-    from museforge.auth import routes as auth_routes
-
-    monkeypatch.setattr(auth_routes, "PUBLIC_BASE_URL", "http://testserver")
-    monkeypatch.setattr(
-        auth_routes, "GOOGLE_REDIRECT_URI", "http://testserver/callback"
-    )
+    monkeypatch.setenv("MUSEFORGE_PUBLIC_BASE_URL", "http://testserver")
+    monkeypatch.setenv("MUSEFORGE_GOOGLE_REDIRECT_URI", "http://testserver/callback")
 
     from starlette.applications import Starlette
 
@@ -134,7 +129,6 @@ def _build_app_for_test(monkeypatch: pytest.MonkeyPatch):
 
     app = Starlette(routes=list(OAUTH_ROUTES))
     app.state.auth_store = InMemoryAuthStore()
-    app.state.pending = {}
     return app
 
 

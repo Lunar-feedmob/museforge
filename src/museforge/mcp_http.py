@@ -192,7 +192,7 @@ def _build_app() -> Any:
     from museforge.auth import (
         MCP_MOUNT_PATH,
         OAUTH_ROUTES,
-        InMemoryAuthStore,
+        auth_store_from_env,
         bearer_auth_asgi,
     )
 
@@ -205,10 +205,11 @@ def _build_app() -> Any:
     transport_starlette = mcp.streamable_http_app()
     transport_asgi = transport_starlette.router.routes[0].endpoint
 
-    # The OAuth app (routes only — we control lifespan separately).
+    # The OAuth app (routes only — we control lifespan separately). The auth store is
+    # selected by env (defaults to in-memory; set MUSEFORGE_AUTH_STORE=redis for the
+    # Upstash-backed store that survives Vercel Function cold starts).
     oauth_app = Starlette(routes=list(OAUTH_ROUTES))
-    oauth_app.state.auth_store = InMemoryAuthStore()
-    oauth_app.state.pending = {}
+    oauth_app.state.auth_store = auth_store_from_env()
 
     # Compose lifespans so the transport's session manager initializes.
     oauth_lifespan = oauth_app.router.lifespan_context

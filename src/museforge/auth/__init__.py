@@ -25,22 +25,28 @@ from museforge.auth.routes import (
 from museforge.auth.store import (
     AccessToken,
     AuthCode,
+    BaseAuthStore,
     InMemoryAuthStore,
+    RedisAuthStore,
     RegisteredClient,
+    auth_store_from_env,
 )
 
 __all__ = [
     "AccessToken",
     "AuthCode",
     "AuthError",
+    "BaseAuthStore",
     "DEFAULT_SCOPES",
     "GoogleOAuthError",
     "InMemoryAuthStore",
     "InvalidTokenError",
     "MCP_MOUNT_PATH",
     "OAUTH_ROUTES",
+    "RedisAuthStore",
     "RegisteredClient",
     "allowed_email_domains",
+    "auth_store_from_env",
     "bearer_auth_asgi",
     "build_auth_url",
     "exchange_code",

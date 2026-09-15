@@ -1,0 +1,48 @@
+# Vercel build exclusions (in addition to vercel.json's excludeFiles).
+# Keep the deploy bundle lean and skip non-runtime assets.
+
+# Git + VCS
+.git/
+.gitignore
+.gitattributes
+.github/
+
+# Local virtual env / caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Tests + docs + tooling (not shipped at runtime)
+tests/
+docs/
+examples/
+deploy/
+schemas/
+scripts/
+
+# Local Claude config
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / dist artifacts
+build/
+dist/
+
+# Editor / IDE
+.idea/
+.vscode/
+
+# Existing local env file (Vercel uses its own env, not .env)
+.env
+.env.local
+.env.*.local

@@ -12,6 +12,10 @@ Implements the authorization-code flow with Google as the upstream IdP:
 
 Plus the discovery endpoints required by the MCP OAuth spec and a Bearer-auth ASGI wrapper
 that protects the MCP transport.
+
+The OAuth state pending exchange (``pending`` map) is stored in the same auth store as
+clients / codes / tokens. This ensures the state survives serverless cold starts so the
+callback → token handshake does not fail mid-flow.
 """
 
 from __future__ import annotations
@@ -29,20 +33,29 @@ from starlette.routing import Route
 
 from museforge.auth.errors import GoogleOAuthError
 from museforge.auth.google import build_auth_url, exchange_code, verify_id_token
-from museforge.auth.store import AccessToken, InMemoryAuthStore
+from museforge.auth.store import AccessToken, BaseAuthStore
 
-# Public base URL of this server (what the MCP client sees). Override in production.
-PUBLIC_BASE_URL = os.environ.get("MUSEFORGE_PUBLIC_BASE_URL", "http://localhost:8000")
-# Redirect URI registered with Google for THIS server's /callback. Must match exactly.
-GOOGLE_REDIRECT_URI = os.environ.get(
-    "MUSEFORGE_GOOGLE_REDIRECT_URI", f"{PUBLIC_BASE_URL}/callback"
-)
+# Public base URL of this server (what the MCP client sees). Read per-request so Vercel
+# env-var changes between deploys are picked up without a process restart.
 # Path mounted as the MCP transport (Streamable HTTP).
 MCP_MOUNT_PATH = "/mcp"
 
 # Comma-separated list of email domains allowed to authenticate (default: feedmob.com).
 # Example:  MUSEFORGE_ALLOWED_EMAIL_DOMAINS=feedmob.com,feedmob.cn
 _DEFAULT_ALLOWED_DOMAINS = ("feedmob.com",)
+
+
+def _public_base_url() -> str:
+    """The URL the MCP client sees (read fresh on every request)."""
+    return os.environ.get("MUSEFORGE_PUBLIC_BASE_URL", "http://localhost:8000")
+
+
+def _google_redirect_uri() -> str:
+    """The redirect URI registered with Google for THIS server's /callback."""
+    override = os.environ.get("MUSEFORGE_GOOGLE_REDIRECT_URI")
+    if override:
+        return override
+    return f"{_public_base_url()}/callback"
 
 
 def allowed_email_domains() -> set[str]:
@@ -68,20 +81,22 @@ def _is_email_allowed(email: str | None, claims: dict[str, Any]) -> bool:
 
 
 def _resource_metadata() -> dict[str, Any]:
+    base = _public_base_url()
     return {
-        "resource": PUBLIC_BASE_URL,
-        "authorization_servers": [PUBLIC_BASE_URL],
+        "resource": base,
+        "authorization_servers": [base],
         "bearer_methods_supported": ["header"],
         "scopes_supported": ["museforge"],
     }
 
 
 def _authorization_server_metadata() -> dict[str, Any]:
+    base = _public_base_url()
     return {
-        "issuer": PUBLIC_BASE_URL,
-        "authorization_endpoint": f"{PUBLIC_BASE_URL}/authorize",
-        "token_endpoint": f"{PUBLIC_BASE_URL}/token",
-        "registration_endpoint": f"{PUBLIC_BASE_URL}/register",
+        "issuer": base,
+        "authorization_endpoint": f"{base}/authorize",
+        "token_endpoint": f"{base}/token",
+        "registration_endpoint": f"{base}/register",
         "response_types_supported": ["code"],
         "grant_types_supported": ["authorization_code"],
         "code_challenge_methods_supported": ["S256", "plain"],
@@ -105,7 +120,7 @@ async def authorization_server_metadata(request: Request) -> JSONResponse:
 
 
 async def register_client(request: Request) -> JSONResponse:
-    store: InMemoryAuthStore = request.app.state.auth_store
+    store: BaseAuthStore = request.app.state.auth_store
     client = store.register_client()
     return JSONResponse(
         {
@@ -121,8 +136,7 @@ async def register_client(request: Request) -> JSONResponse:
 
 
 async def authorize(request: Request) -> Response:
-    store: InMemoryAuthStore = request.app.state.auth_store
-    pending: dict[str, dict[str, Any]] = request.app.state.pending
+    store: BaseAuthStore = request.app.state.auth_store
     params = request.query_params
     client_id = params.get("client_id")
     redirect_uri = params.get("redirect_uri")
@@ -133,14 +147,17 @@ async def authorize(request: Request) -> Response:
     if not store.get_client(client_id):
         return JSONResponse({"error": "unknown_client"}, status_code=400)
     google_state = secrets.token_urlsafe(16)
-    pending[google_state] = {
-        "client_id": client_id,
-        "redirect_uri": redirect_uri,
-        "scope": scope,
-        "state": state,
-    }
+    store.set_pending(
+        google_state,
+        {
+            "client_id": client_id,
+            "redirect_uri": redirect_uri,
+            "scope": scope,
+            "state": state,
+        },
+    )
     try:
-        url = build_auth_url(google_state, GOOGLE_REDIRECT_URI)
+        url = build_auth_url(google_state, _google_redirect_uri())
     except GoogleOAuthError as exc:
         return JSONResponse({"error": "google_not_configured", "detail": str(exc)}, status_code=500)
     return RedirectResponse(url)
@@ -150,7 +167,7 @@ async def authorize(request: Request) -> Response:
 
 
 async def google_callback(request: Request) -> Response:
-    pending: dict[str, dict[str, Any]] = request.app.state.pending
+    store: BaseAuthStore = request.app.state.auth_store
     google_state = request.query_params.get("state")
     code = request.query_params.get("code")
     error = request.query_params.get("error")
@@ -158,12 +175,12 @@ async def google_callback(request: Request) -> Response:
         return JSONResponse({"error": "google_denied", "detail": error}, status_code=400)
     if not google_state or not code:
         return JSONResponse({"error": "invalid_request"}, status_code=400)
-    mcp_request = pending.pop(google_state, None)
+    mcp_request = store.take_pending(google_state)
     if not mcp_request:
         return JSONResponse({"error": "invalid_state"}, status_code=400)
 
     try:
-        tokens = exchange_code(code, GOOGLE_REDIRECT_URI)
+        tokens = exchange_code(code, _google_redirect_uri())
     except GoogleOAuthError as exc:
         return JSONResponse({"error": "google_exchange_failed", "detail": str(exc)}, status_code=400)
 
@@ -191,7 +208,6 @@ async def google_callback(request: Request) -> Response:
             status_code=403,
         )
 
-    store: InMemoryAuthStore = request.app.state.auth_store
     mcp_code = store.create_auth_code(
         subject=subject,
         email=email,
@@ -207,7 +223,7 @@ async def google_callback(request: Request) -> Response:
 
 
 async def token(request: Request) -> JSONResponse:
-    store: InMemoryAuthStore = request.app.state.auth_store
+    store: BaseAuthStore = request.app.state.auth_store
     form = await request.form()
     grant_type = str(form.get("grant_type") or "")
     code = str(form.get("code") or "")
@@ -267,17 +283,18 @@ def bearer_auth_asgi(inner_app: Any) -> Any:
             await inner_app(scope, receive, send)
             return
         token_str = _extract_bearer(scope.get("headers", []))
-        store: InMemoryAuthStore = scope["app"].state.auth_store
+        store: BaseAuthStore = scope["app"].state.auth_store
         info: AccessToken | None = (
             store.validate_access_token(token_str) if token_str else None
         )
         if info is None:
             body = json.dumps({"error": "invalid_token"}).encode("utf-8")
+            base = _public_base_url()
             headers = [
                 (b"content-type", b"application/json"),
                 (
                     b"www-authenticate",
-                    f'Bearer resource_metadata="{PUBLIC_BASE_URL}'
+                    f'Bearer resource_metadata="{base}'
                     f'/.well-known/oauth-protected-resource"'.encode("ascii"),
                 ),
             ]

@@ -350,6 +350,76 @@ The HTTP server exposes the **11 MCP tools** (`create_image_prompt`,
 See [`docs/mcp-roadmap.md`](docs/mcp-roadmap.md) for the full architecture, the Google
 Cloud Console setup, the endpoint table, and production notes (TLS, persistent token store).
 
+### Connect any MCP client to the HTTP server
+
+Any MCP-compliant client (Claude Desktop, Cursor, Windsurf, VS Code + Cline/Continue,
+ChatGPT Desktop, MCP Inspector, …) can connect to the Streamable HTTP transport at
+`https://<your-host>/mcp`. The OAuth flow is the standard MCP authorization-code flow —
+the client opens a browser, you sign in to Google, you get redirected back, and the
+client receives a Bearer token.
+
+| Client | Config snippet |
+|---|---|
+| **Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json`) | `{"mcpServers": {"museforge": {"url": "https://<host>/mcp", "transport": "http"}}}` |
+| **Cursor** (`.cursor/mcp.json`) | `{"mcpServers": {"museforge": {"url": "https://<host>/mcp"}}}` |
+| **VS Code** (`settings.json` / `.vscode/mcp.json`) | `{"servers": {"museforge": {"url": "https://<host>/mcp", "type": "http"}}}` |
+| **Cline / Continue** (provider-specific MCP config) | `{"museforge": {"url": "https://<host>/mcp", "type": "streamable-http"}}` |
+| **Windsurf** (`~/.codeium/windsurf/mcp_config.json`) | `{"mcpServers": {"museforge": {"url": "https://<host>/mcp"}}}` |
+| **MCP Inspector** (debug / dev) | `npx @modelcontextprotocol/inspector` → paste the URL, follow the OAuth pop-up |
+| **Any stdio-only client** (legacy bridge) | `npx -y mcp-remote https://<host>/mcp --transport http` (not recommended — use a native HTTP client if available) |
+
+On first connect the client will pop a Google sign-in window. After consent the
+browser is redirected to your `/callback`, the client receives an access token,
+and the tool calls work transparently.
+
+### Deploy to Vercel
+
+The fastest way to get a public HTTPS MCP server is Vercel Functions + Upstash Redis
+(an OAuth token store that survives Function cold starts — without it, serverless
+cold starts would kick authenticated users out mid-session).
+
+1. **Push the repo to GitHub** (or GitLab/Bitbucket).
+2. **Import to Vercel** — `vercel.com/new` → Import Project → select your fork.
+3. **Add Upstash Redis** from the Vercel Marketplace (Storage → Redis → Create).
+   Auto-injects `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` into
+   every Function.
+4. **Set env vars** in Project Settings → Environment Variables:
+
+   ```
+   GOOGLE_CLIENT_ID=<from Google Cloud Console>
+   GOOGLE_CLIENT_SECRET=<from Google Cloud Console>
+   MUSEFORGE_PUBLIC_BASE_URL=https://<project>.vercel.app
+   MUSEFORGE_GOOGLE_REDIRECT_URI=https://<project>.vercel.app/callback
+   MUSEFORGE_AUTH_STORE=redis
+   MUSEFORGE_DATA_DIR=data
+   MUSEFORGE_ALLOWED_EMAIL_DOMAINS=feedmob.com
+   # Optional — enables the LLM path. Without it, MuseForge runs the deterministic heuristic.
+   # ANTHROPIC_API_KEY=...
+   # MUSEFORGE_LLM_PROVIDER=anthropic
+   ```
+
+5. **Google Cloud Console** → your OAuth Client → Authorized redirect URIs →
+   add `https://<project>.vercel.app/callback`.
+6. **Deploy** — `vercel deploy --prod` (or push to the connected branch). The
+   function `app.py` is auto-detected by Vercel's Python runtime.
+7. **Verify** — `curl https://<project>.vercel.app/.well-known/oauth-authorization-server`
+   should return the OAuth metadata with the vercel.app URL.
+8. **Connect an MCP client** using one of the configs above.
+
+For Hobby plan, `maxDuration` is 60 s (set in `vercel.json`) which covers OAuth
+handshake + initial MCP session. For long-lived SSE sessions bump to 300 s +
+Pro plan. Vercel Python Functions have streaming on by default; MCP Streamable
+HTTP works as-is. Custom domains are supported — just update
+`MUSEFORGE_PUBLIC_BASE_URL` and `MUSEFORGE_GOOGLE_REDIRECT_URI` to match.
+
+For self-hosted / non-Vercel deployments (your own VPS, Cloudflare Tunnel, etc.),
+see [`deploy/cloudflared-config.yml`](deploy/cloudflared-config.yml) and
+[`docs/deploy.md`](docs/deploy.md). Vercel KV was deprecated in 2024-12 and
+moved to the Upstash Redis Marketplace integration — the plan that adds the
+Upstash-backed `RedisAuthStore` makes the same OAuth HTTP server portable across
+both Vercel and any platform that can reach Upstash (Cloudflare Workers, Fly.io,
+Render, your own Kubernetes, …).
+
 ## Status
 
 **V0** — knowledge acquisition, deduplication, analysis, extraction, retrieval, creative

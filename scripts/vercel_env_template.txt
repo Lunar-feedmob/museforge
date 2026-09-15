@@ -1,0 +1,50 @@
+# Vercel environment variables for MuseForge MCP.
+# Copy each line below into your shell — replace <PLACEHOLDER> with your real values
+# (or just run `vercel env add <NAME> production` interactively and paste when prompted).
+#
+# Upstash Redis env vars (UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN) are
+# auto-injected when you install the Upstash Redis integration from the Vercel
+# Marketplace — do NOT set those manually unless you're using a self-hosted Upstash.
+
+# --- Required ---
+
+# Google OAuth Web-application credentials from
+# https://console.cloud.google.com/apis/credentials
+GOOGLE_CLIENT_ID=<your-client-id>.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=<your-client-secret>
+
+# Public URL the MCP client connects to. After your first deploy, Vercel will
+# assign a URL like https://museforge-<hash>.vercel.app — paste that here and
+# redeploy so OAuth metadata reflects the real URL.
+MUSEFORGE_PUBLIC_BASE_URL=https://museforge-<hash>.vercel.app
+
+# The redirect URI registered with Google. Must EXACTLY match an entry in your
+# OAuth client's "Authorized redirect URIs" list.
+MUSEFORGE_GOOGLE_REDIRECT_URI=https://museforge-<hash>.vercel.app/callback
+
+# Required for Vercel Functions. `memory` would also work for a single-instance
+# deploy but tokens would be lost on every cold start (OAuth users would be
+# kicked out mid-session).
+MUSEFORGE_AUTH_STORE=redis
+
+# Comma-separated email-domain allowlist. Default is feedmob.com — empty string
+# disables the allowlist (any Google account can authenticate).
+MUSEFORGE_ALLOWED_EMAIL_DOMAINS=feedmob.com
+
+# Where the bundled JSON knowledge base lives. Vercel ships data/ in the deploy
+# (it is not gitignored), so `data` resolves correctly to the function CWD.
+MUSEFORGE_DATA_DIR=data
+
+# --- Optional ---
+
+# Enable LLM-powered intent understanding, knowledge extraction, creative
+# direction, and composition. Without these the deterministic heuristic path
+# runs (works fully, just less creative).
+# MUSEFORGE_LLM_PROVIDER=anthropic
+# ANTHROPIC_API_KEY=<your-anthropic-key>
+
+# Server bind defaults — Vercel Functions don't use these (uvicorn isn't started
+# locally by Vercel), but they make local `museforge-mcp-http --host 0.0.0.0`
+# work the same as before.
+# MUSEFORGE_HOST=127.0.0.1
+# MUSEFORGE_PORT=8000
