@@ -105,6 +105,11 @@ def _build_mcp_server() -> Any:
     # transport layer is redundant for a serverless deploy behind HTTPS.
     mcp = FastMCP(
         "museforge",
+        # Stateless HTTP transport — every request is independent, no server-side
+        # session state. Required for serverless deploys (Vercel, Cloud Run, ...)
+        # where Function instances are recycled between requests; otherwise the
+        # MCP session expires the first time the function cold-starts.
+        stateless_http=True,
         transport_security=TransportSecuritySettings(
             enable_dns_rebinding_protection=False,
             allowed_hosts=[],
