@@ -120,16 +120,50 @@ async def authorization_server_metadata(request: Request) -> JSONResponse:
 
 
 async def register_client(request: Request) -> JSONResponse:
+    """RFC 7591 Dynamic Client Registration.
+
+    The MCP client (e.g. Claude Code) sends a JSON body with the metadata it wants
+    to register. We accept it, generate a fresh ``client_id``, and echo back the
+    fields the client provided (per the spec, the server SHOULD echo back
+    ``redirect_uris``). The body is optional — clients that don't send one still
+    get a working ``client_id``.
+    """
     store: BaseAuthStore = request.app.state.auth_store
     client = store.register_client()
-    return JSONResponse(
-        {
-            "client_id": client.client_id,
-            "client_id_issued_at": int(client.created_at),
-            # Public client (no secret) — typical for MCP clients in browsers/native apps.
-        },
-        status_code=201,
-    )
+
+    body: dict[str, Any] = {}
+    if request.headers.get("content-type", "").startswith("application/json"):
+        try:
+            raw = await request.json()
+            if isinstance(raw, dict):
+                body = raw
+        except Exception:  # noqa: BLE001 - body is optional
+            body = {}
+
+    response: dict[str, Any] = {
+        "client_id": client.client_id,
+        "client_id_issued_at": int(client.created_at),
+        # Public client (no secret) — typical for MCP clients in browsers/native apps.
+        "token_endpoint_auth_method": "none",
+        "grant_types": ["authorization_code"],
+        "response_types": ["code"],
+    }
+    # Echo back RFC 7591 fields the client provided. Several MCP SDKs (e.g. Claude
+    # Code's) validate that redirect_uris is present in the response when it was in
+    # the request — without this echo the auth handshake fails.
+    for field in (
+        "redirect_uris",
+        "client_name",
+        "client_uri",
+        "logo_uri",
+        "scope",
+        "contacts",
+        "software_id",
+        "software_version",
+    ):
+        if field in body:
+            response[field] = body[field]
+    return JSONResponse(response, status_code=201)
 
 
 # -- /authorize: redirect to Google --------------------------------------
